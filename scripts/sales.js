@@ -3,9 +3,6 @@ const salesOutput = document.querySelector("#sales-info")
 
 const restaurants = SalesModule.getSales();
 
-/* restaurants.forEach(restaurant => console.log(restaurant.getTotalSalesFromYear(2020)))
-console.log(`Resultat for pizza 1(restaurant 1) totalt:${restaurants[0].getItemTotal("pizza 1")}
-antal: ${restaurants[0].getItemAmount("pizza 1")}`) */
 
 function generateTotalSales() {
     let total = 0;
@@ -26,4 +23,3 @@ function generateTotalSales() {
 
 
 generateTotalSales();
-//console.log(restaurants[0].getTotalSalesFromYear(2021))
