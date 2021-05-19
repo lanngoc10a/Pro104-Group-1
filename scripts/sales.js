@@ -3,7 +3,8 @@ import SalesModule from "../Modules/SalesModule.js"
 const salesOutput = document.querySelector("#sales-info")
 const dropdown = document.querySelector("#dropdown")
 const saleSearchOutput = document.querySelector("#sale-search-output")
-
+const yearlySales = document.querySelector("#yearly-sales")
+const monthlySales = document.querySelector("#monthly-sales")
 /* eventlistener */
 document.querySelector("#submit-search").addEventListener("click", () => {
     showSaleSearch();
@@ -20,9 +21,7 @@ function generateTotalSales() {
     let total = 0;
     restaurants.forEach(res => total += res.getTotalSalesFromYear(2021))
     salesOutput.innerHTML = `
-    <p class="title">
-            Salg for i 2021: ${total.toLocaleString()},-
-        </p><br>
+    <h2 class="title">Salg per restaurant</h2>
     <div class="earning-columns">
         <div class="earning-column" style="height:${statisticValues[0]}%"></div>
         <div class="earning-column" style="height:${statisticValues[1]}%"></div>
@@ -37,6 +36,52 @@ function generateTotalSales() {
     </div>
         <br>
     `;
+
+    yearlySales.innerHTML= `
+    <p class="title">
+            Salg i 2021: <span class="yearly-text">${total.toLocaleString()},-</span>
+            
+    </p>
+    
+        `;
+}
+
+// MIDLERTIDIG
+function generateMonthlySales() {
+    let html = "";
+    html = `
+    <p class="title">Salg per mnd</p>
+    
+    <div class="earning-columns">
+        <div class="monthly-column earning-column" style="height:90%"></div>
+        <div class="monthly-column earning-column" style="height:20%"></div>
+        <div class="monthly-column earning-column" style="height:55%"></div>
+        <div class="monthly-column earning-column" style="height:100%"></div>
+        <div class="monthly-column earning-column" style="height:90%"></div>
+        <div class="monthly-column earning-column" style="height:20%"></div>
+        <div class="monthly-column earning-column" style="height:55%"></div>
+        <div class="monthly-column earning-column" style="height:100%"></div>
+        <div class="monthly-column earning-column" style="height:90%"></div>
+        <div class="monthly-column earning-column" style="height:20%"></div>
+        <div class="monthly-column earning-column" style="height:55%"></div>
+        <div class="monthly-column earning-column" style="height:100%"></div>
+    </div>
+    <div class="is-flex is-justify-content-space-evenly">
+        <p>Jan</p>
+        <p>Feb</p>
+        <p>Mars</p>
+        <p>Apr</p>
+        <p>Mai</p>
+        <p>Juni</p>
+        <p>Juli</p>
+        <p>Aug</p>
+        <p>Sept</p>
+        <p>Okt</p>
+        <p>Nov</p>
+        <p>Des</p>
+    </div> 
+    `
+    monthlySales.innerHTML = html;
 }
 
 function getValuesFromTotals() {
@@ -91,7 +136,7 @@ function generateRestaurantChoice () {
     let html = "";
     restaurants.forEach(restaurant => {
         html += `
-        <label class="radio">
+        <label class="radio restaurant-radio">
             <input type="radio" name="restaurant" value="${restaurant.name}">
             ${restaurant.name}
         </label>
@@ -118,6 +163,7 @@ function showSaleSearch() {
     html += `
         <div class="card">
             <h2 class="title">${chosenItem}</h2>
+            <h3 class="subtitle">Resultat fra: ${selectedRestaurant}</h3>
             <p>Total inntjening: ${itemTotal.toLocaleString()},-<p>
             <p>Antall solgte enheter: ${itemAmount.toLocaleString()}</p>
         </div>
@@ -127,7 +173,7 @@ function showSaleSearch() {
         saleSearchOutput.innerHTML = `<p class="help is-danger">Velg en restaurant</p>`
     }
 }
-
+generateMonthlySales();
 generateRestaurantChoice();
 generateTotalSales();
 generateDropdown();
