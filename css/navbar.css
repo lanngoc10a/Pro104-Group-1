@@ -1,0 +1,31 @@
+* {
+    margin: 0 ;
+    padding: 0 ;
+}
+
+.navbar {
+    background-color: rgb(84, 84, 179);
+    width: 100%;
+    height: 4rem;
+
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+}
+
+li {
+    list-style: none;
+    margin: 0;
+}
+
+a {
+    color:rgb(158, 216, 182);
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+}
