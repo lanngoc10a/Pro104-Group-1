@@ -16,21 +16,56 @@ const restaurants = SalesModule.getSales();
 
 
 function generateTotalSales() {
+    let statisticValues = getValuesFromTotals();
     let total = 0;
     restaurants.forEach(res => total += res.getTotalSalesFromYear(2021))
-    salesOutput.innerHTML += `
-        <p>
-            total solgt for i 2021: ${total.toLocaleString()},-
-        </p>
+    salesOutput.innerHTML = `
+    <p class="title">
+            Salg for i 2021: ${total.toLocaleString()},-
+        </p><br>
+    <div class="earning-columns">
+        <div class="earning-column" style="height:${statisticValues[0]}%"></div>
+        <div class="earning-column" style="height:${statisticValues[1]}%"></div>
+        <div class="earning-column" style="height:${statisticValues[2]}%"></div>
+        <div class="earning-column" style="height:${statisticValues[3]}%"></div>
+    </div> 
+    <div class="restaurant-earnings">
+        <p>${restaurants[0].name}: ${restaurants[0].getTotal().toLocaleString()},- </p>
+        <p>${restaurants[1].name}: ${restaurants[1].getTotal().toLocaleString()},-</p>
+        <p>${restaurants[2].name}: ${restaurants[2].getTotal().toLocaleString()},-</p>
+        <p>${restaurants[3].name}: ${restaurants[3].getTotal().toLocaleString()},-</p>
+    </div>
         <br>
-        <p>
-            ${restaurants[0].name}: ${restaurants[0].getTotal().toLocaleString()},- <br>
-            ${restaurants[1].name}: ${restaurants[1].getTotal().toLocaleString()},- <br>
-            ${restaurants[2].name}: ${restaurants[2].getTotal().toLocaleString()},- <br>
-            ${restaurants[3].name}: ${restaurants[3].getTotal().toLocaleString()},- 
-        </p>
-    `
+    `;
 }
+
+function getValuesFromTotals() {
+    let values = []
+    let totals = []
+    restaurants.forEach(restaurant => {
+        totals.push(restaurant.getTotal());
+    })
+
+    /* finnner høyeste */
+    let highest = 0;
+    
+    totals.forEach(element =>{
+        if(element>highest){
+            highest=element
+        }
+    })
+    console.log(highest)
+    /* finner prosenten av den høyeste for de forskjellige totalene */
+    for(let i = 0; i < totals.length; i++) {
+        values.push(percentOf(totals[i], highest))
+    }
+
+    return values;
+}
+
+function percentOf(x, y) {
+    return (x/y) * 100;
+} 
 
 function generateDropdown() {
     let html = "";

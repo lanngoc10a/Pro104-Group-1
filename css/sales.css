@@ -1,0 +1,29 @@
+.earning-columns {
+    display: flex;
+    justify-content: space-evenly;
+    height:200px;
+    width:100%;
+}
+.earning-column {
+    background-color: rgb(93, 255, 120);
+    align-self: flex-end;
+    border: 1px solid black;
+    width:5em;
+}
+
+#sales-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    max-width: 30em;
+    padding:1em;
+}
+
+.restaurant-earnings {
+    display:flex;
+    justify-content: space-evenly;
+    width:100%;
+    padding:1em;
+}
