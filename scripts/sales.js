@@ -1,6 +1,6 @@
 import SalesModule from "../Modules/SalesModule.js"
 const salesOutput = document.querySelector("#sales-info")
-
+const dropdown = document.querySelector("#dropdown")
 const restaurants = SalesModule.getSales();
 
 
@@ -21,5 +21,26 @@ function generateTotalSales() {
     `
 }
 
+function generateDropdown() {
+    let html = "";
+    let menuItems = [
+        "pizza 1",
+        "pizza 2",
+        "pizza 3",
+        "pizza 4",
+        "calzone",
+        "øl",
+        "brus"
+    ]
+    menuItems.forEach(element => {
+        html+= `
+            <option> ${element} </option>
+        `
+    })
+
+    dropdown.innerHTML = html;
+}
+
 
 generateTotalSales();
+generateDropdown();
