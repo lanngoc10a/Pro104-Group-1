@@ -13,4 +13,4 @@ function addnewRecipe(){
     addRecipe = addRecipeTxt.value;
     addRecipeUl.innerHTML += `<p >  ${addRecipe} . </p>`;
 }
-addnewRecipeBtn.onclick = addnewRecipe
+addnewRecipeBtn.onclick = addnewRecipe;
