@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <script type="module" src="../scripts/employee-scripts/employee-generator.js"></script>
-    <!--<script type="module" src="../scripts/employee-function.js"></script>-->
     <script type="module" src="../scripts/employee-scripts/employee-functions.js"></script>
 
     <title>Ansatte</title>
@@ -35,9 +34,10 @@
                     <!-- Klikkbare Lokasjoner -->
                     <section class="column has-text-right">
                         <div>
-                            <p class="title is-1">Oslo</p>
+                            <a id="oslo" class="title is-1">Oslo</a>
                             <p class="title is-1">Stavanger</p>
-                            <p class="title is-1">Kristiansand</p>
+                            <a id="kristiansand" class="title is-1">Kristiansand</a>
+                            <p class="title is-1">Alle våre ansatte</p>
                         </div>
                     </section>
 
@@ -55,15 +55,17 @@
                 <section class="columns">
 
                     
-
+                        
                         <div id="employee-function" class="column has-background-info is-4">
-
+                            
                         
                         </div>
 
-                        <div id="added-employee" class="column">
-                                
+                        <div id="remove-employee-function" class="column">
+                            
                         </div>
+
+                        
 
 
                         

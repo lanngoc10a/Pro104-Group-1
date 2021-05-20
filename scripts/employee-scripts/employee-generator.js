@@ -6,9 +6,11 @@ import EmployeeModule from '../../Modules/EmployeeModule.js'
     const employeeGenerator = () => {
         let htmlTxt = "";
         
+        
+            //Bruker den ansattes navn som article-ID så den senere kan bli slettet
         EmployeeModule.getAllEmployees().forEach( employee => {
             htmlTxt += `
-                <article class="column is-4 has-text-centered">
+                <article id="${employee.name}" class="column is-4 has-text-centered">
                     <img src="../Images/employees/${employee.image}" alt="Photo of ${employee.name}">
                     
                     <h3 class="title is-3">${employee.name}</h3>
@@ -20,30 +22,5 @@ import EmployeeModule from '../../Modules/EmployeeModule.js'
     }
     
     employeeGenerator();
-
-    /*const employeeMaker = () => {
-        let htmlTxt = "";
-
-        htmlTxt += `
-        <article class="column is-3">
-            <div class="field">
-                <label class="label">Fullt navn</label>  
-                <p class="control has-icons-left has-icons-right">
-                    <input class="input" type="text" placeholder="e.g Olav Nilsen">
-                    <span class="icon is-small is-right">
-                        <i class="fas fa-check"></i>
-                    </span>
-                    <span class="icon is-small is-left">
-                        <i class="fas fa-user"></i>
-                    </span>
-                </p>
-            </div>
-        </article>
-        `;
-
-        employeeFunction.innerHTML = htmlTxt; 
-    }
-
-    employeeMaker();*/
 
     
