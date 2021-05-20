@@ -1,4 +1,4 @@
-import EmployeeModule from '../Modules/EmployeeModule.js'
+import EmployeeModule from '../../Modules/EmployeeModule.js'
 
     const addEmployeeSection = document.querySelector("#employee-function");
     const employeeSection = document.querySelector("#employee-section");
