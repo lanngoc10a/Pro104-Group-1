@@ -18,11 +18,20 @@ const EmployeeModule = ( function (){
         {name: "Egil Jansen", age: 25, position: "Leverandør", location: "Stavanger", image: "employee-14.jpeg"}
     ];
 
+    const getEmployeeByName = ( name ) => {
+        return employees.filter( employeename => employeename.name === name);
+    }
+
+    const getEmployeeByLocation = ( location ) => {
+        return employees.filter( employeelocation => employeelocation.location === location);
+    }
+
+
     //returner alle ansatte
     const getAllEmployees = () => employees;
 
     //eksponerer getAllEmployees funksjonen
-    return {getAllEmployees};
+    return {getAllEmployees, getEmployeeByName, getEmployeeByLocation};
 
 
 
