@@ -46,25 +46,117 @@ function generateTotalSales() {
         `;
 }
 
+function getSalesPerMonth(sales) {
+    let result = [0,0,0,0,0,0,0,0,0,0,0,0]
+    sales.forEach(element => {
+        switch(element.dateOfPurchase.getMonth()){
+            case 0:
+                result[0] += element.price;
+                break;
+            case 1:
+                result[1] += element.price;
+                break;
+            case 2:
+                result[2] += element.price;
+                break;
+            case 3:
+                result[3] += element.price;
+                break;
+            case 4:
+                result[4] += element.price;
+                break;
+            case 5:
+                result[5] += element.price;
+                break;
+            case 6:
+                result[6] += element.price;
+                break;
+            case 7:
+                result[7] += element.price;
+                break;
+            case 8:
+                result[8] += element.price;
+                break;
+            case 9:
+                result[9] += element.price;
+                break;
+            case 10:
+                result[10] += element.price;
+                break;
+            case 11:
+                result[11] += element.price;
+                break;
+        }
+    })
+    return result;
+}
+/* 
+start  test med monthly sales
+*/ 
+
+function getMonthlySalesForAll() {
+    // getting item objects from restaurants 
+    let arrayWithSales = []
+    restaurants.forEach(element=>{
+        arrayWithSales.push(element.getSaleObjectsFromYear(2021))
+    });
+
+    // adding them to one array.
+    let arrayWithCombinedSales = []
+    arrayWithSales.forEach(element => {
+        element.forEach(sale => {
+            arrayWithCombinedSales.push(sale);
+        })
+        
+    })
+    return getSalesPerMonth(arrayWithCombinedSales)
+}
+
+function getValuesFromTotal(total) {
+    let values = []
+
+    /* finnner høyeste */
+    let highest = 0;
+    
+    total.forEach(element =>{
+        if(element>highest){
+            highest=element
+        }
+    })
+    //console.log(highest)
+        /* finner prosenten av den høyeste for de forskjellige totalene */
+    for(let i = 0; i < total.length; i++) {
+        values.push(percentOf(total[i], highest))
+    }
+
+    return values;
+}
+
+//eventlistner, skal endre månedlig salg ved valg av restaurant
+console.log(document.querySelectorAll('input[name="restaurant"]'))
+//slutt
+
+
 // MIDLERTIDIG
-function generateMonthlySales() {
+function generateMonthlySales(sales, restaurantName) {
+    
     let html = "";
     html = `
-    <p class="title">Salg per mnd</p>
+    <p class="title">Salgstrend per mnd - for ${restaurantName}</p>
     
     <div class="earning-columns">
-        <div class="monthly-column earning-column" style="height:90%"></div>
-        <div class="monthly-column earning-column" style="height:20%"></div>
-        <div class="monthly-column earning-column" style="height:55%"></div>
-        <div class="monthly-column earning-column" style="height:100%"></div>
-        <div class="monthly-column earning-column" style="height:90%"></div>
-        <div class="monthly-column earning-column" style="height:20%"></div>
-        <div class="monthly-column earning-column" style="height:55%"></div>
-        <div class="monthly-column earning-column" style="height:100%"></div>
-        <div class="monthly-column earning-column" style="height:90%"></div>
-        <div class="monthly-column earning-column" style="height:20%"></div>
-        <div class="monthly-column earning-column" style="height:55%"></div>
-        <div class="monthly-column earning-column" style="height:100%"></div>
+        <div class="monthly-column earning-column" style="height:${sales[0]}%"></div>
+        <div class="monthly-column earning-column" style="height:${sales[1]}%"></div>
+        <div class="monthly-column earning-column" style="height:${sales[2]}%"></div>
+        <div class="monthly-column earning-column" style="height:${sales[3]}%"></div>
+        <div class="monthly-column earning-column" style="height:${sales[4]}%"></div>
+        <div class="monthly-column earning-column" style="height:${sales[5]}%"></div>
+        <div class="monthly-column earning-column" style="height:${sales[6]}%"></div>
+        <div class="monthly-column earning-column" style="height:${sales[7]}%"></div>
+        <div class="monthly-column earning-column" style="height:${sales[8]}%"></div>
+        <div class="monthly-column earning-column" style="height:${sales[9]}%"></div>
+        <div class="monthly-column earning-column" style="height:${sales[10]}%"></div>
+        <div class="monthly-column earning-column" style="height:${sales[11]}%"></div>
     </div>
     <div class="is-flex is-justify-content-space-evenly">
         <p>Jan</p>
@@ -99,8 +191,8 @@ function getValuesFromTotals() {
             highest=element
         }
     })
-    console.log(highest)
-    /* finner prosenten av den høyeste for de forskjellige totalene */
+    //console.log(highest)
+        /* finner prosenten av den høyeste for de forskjellige totalene */
     for(let i = 0; i < totals.length; i++) {
         values.push(percentOf(totals[i], highest))
     }
@@ -134,13 +226,17 @@ function generateDropdown() {
 
 function generateRestaurantChoice () {
     let html = "";
+    let counter = 0;
     restaurants.forEach(restaurant => {
         html += `
         <label class="radio restaurant-radio">
-            <input type="radio" name="restaurant" value="${restaurant.name}">
+            <input type="radio" name="restaurant" value="${restaurant.name}" >
             ${restaurant.name}
         </label>
-    `;});
+    `;
+    counter ++;
+
+});
     document.querySelector("#restaurant-choice").innerHTML = html;
 }
 
@@ -173,7 +269,8 @@ function showSaleSearch() {
         saleSearchOutput.innerHTML = `<p class="help is-danger">Velg en restaurant</p>`
     }
 }
-generateMonthlySales();
+
 generateRestaurantChoice();
+generateMonthlySales(getValuesFromTotal(getMonthlySalesForAll()),"alle restauranter");
 generateTotalSales();
 generateDropdown();

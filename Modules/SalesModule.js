@@ -12,6 +12,7 @@ const SalesModule = (function () {
             this.name = name;
             this.productsSold = productsSold;
         }
+
         getTotal = () => {
             let total = 0;
             this.productsSold.forEach(element => {
@@ -49,6 +50,17 @@ const SalesModule = (function () {
             })
             return total;
         }
+        
+        getSaleObjectsFromYear = year => {
+            let result = []
+            this.productsSold.forEach(element => {
+                if(element.dateOfPurchase.getFullYear() === year) {
+                    result.push(element);
+                }
+            });
+            return result;
+        }
+
     }
     
     const randomItem = () => {
