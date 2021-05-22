@@ -4,7 +4,7 @@
     const addEmployeeSection = document.querySelector("#employee-function");
     const employeeSection = document.querySelector("#employee-section");
     const removeEmployeeFunction = document.querySelector("#remove-employee-function");
-
+    const changeEmployeeFunction = document.querySelector("#change-employee-function");
 
 
     
@@ -56,7 +56,7 @@
 
             <!-- POSISJON -->
             <div class="columns is-6">
-            <article class="column ">
+            <article class="column">
                 <div class="field">
                     <label class="label">Posisjon</label> 
                     <p class="control has-icons-left has-icons-right">
@@ -73,6 +73,7 @@
                     </p>
                 </div>
             </article>
+            
             
 
             <!-- KNAPP -->
@@ -181,31 +182,166 @@
                 employeeSection.innerHTML = htmlTxt;
             })
         })
+
+        document.querySelectorAll("#stavanger").forEach( stavangerTitle => {
+            stavangerTitle.addEventListener("click", ( e ) => {
+                let htmlTxt = "";
+                let location = "Stavanger";
+                
+                EmployeeModule.getEmployeeByLocation( location ).forEach( employee => {
+                    htmlTxt += `
+                    <article id="${employee.name}" class="column is-4 has-text-centered">
+                    <img src="../Images/employees/${employee.image}" alt="Photo of ${employee.name}">
+                    
+                    <h3 class="title is-3">${employee.name}</h3>
+                    <p class="subtitle is-5">${employee.position}</p>
+                    </article>
+                    `; 
+                })
+                employeeSection.innerHTML = htmlTxt;
+            })
+        })
+
+        document.querySelectorAll("#alle-ansatte").forEach( stavangerTitle => {
+            stavangerTitle.addEventListener("click", ( e ) => {
+                let htmlTxt = "";
+                
+                
+                EmployeeModule.getAllEmployees().forEach( employee => {
+                    htmlTxt += `
+                        <article id="${employee.name}" class="column is-4 has-text-centered">
+                            <img src="../Images/employees/${employee.image}" alt="Photo of ${employee.name}">
+                            
+                            <h3 class="title is-3">${employee.name}</h3>
+                            <p class="subtitle is-5">${employee.position}</p>
+                        </article>
+                    `; 
+                })
+                employeeSection.innerHTML = htmlTxt;
+            })
+        })
         
     }
     employeeLocation();
 
+
+
+
+
+    
+
                 /***** FJERNE ANSATTE *****/
+    
     const removeEmployee = () => {
         let htmlTxt = "";
-        const removeInput = document.querySelector("#remove-input");
-        let remove = removeInput;
+        
+            htmlTxt += `
+                <article>
+                    <label class="label">Fjern en ansatt</label>
+                    <input id="remove-input" class="input" type="text" placeholder="e.g Mika Nilsen">
+                    <button id="remove-button" class="button">Gå</button>
+                </article>
+            `;
 
-        htmlTxt += `
-            <article class="column">
-                <input id="remove-input" class="input" type="text">
-                <button id="remove-button" class="button">Gå</button>
-            </article>
-        `;
-        removeEmployeeFunction.innerHTML = htmlTxt;
+            removeEmployeeFunction.innerHTML = htmlTxt;
 
-        document.querySelectorAll("#remove-button").forEach( removeButton => {
-            removeButton.addEventListener("click", ( e ) => {
-                remove = removeInput.value;
 
-                removeEmployeeFunction.innerHTML += `<p>Hei</p>`;
+        document.querySelectorAll("#remove-button").forEach( button => {
+            button.addEventListener("click", ( e ) => {
+                const removeInput = document.getElementById("remove-input");
+                let remove = removeInput.value;
+
+                document.getElementById(`${remove}`).remove();    
             })
-        })
+        }) 
+    }
+    removeEmployee();
+
+
+                /***** ENDRE ANSATTE *****/
+    const modifyEmployee = () => {
+        let htmlTxt = "";
+            
+        htmlTxt += `
+        <article>
+            <label class="label">Endre en ansatts posisjon</label>
+            <div class="field">
+                    <p class="control has-icons-left has-icons-right">
+                        <div class="select">
+                            <select id="employee-input">
+                                <option>Velg ansatt</option>
+                                <option>Richard Nystrøm</option>
+                                <option>Karen Jackeson</option>
+                                <option>Ove Olsen</option>           
+                                <option>Jens Olsen</option>           
+                                <option>Ida Bakken</option>           
+                                <option>Lisa Barion</option>           
+                                <option>Rebekka Avlesen</option>           
+                                <option>Mikkel Olsen</option>           
+                                <option>Magdalena Øst</option>           
+                                <option>Julie Kristiansen</option>           
+                                <option>Idar Bakke</option>           
+                                <option>Thomas Richardsen</option>           
+                                <option>Mika Nilsen</option>           
+                                <option>Egil Jansen</option>           
+                            </select>
+                        </div>
+
+                        <div class="select">
+                            <select id="position-input-modify">
+                                <option>Velg posisjon</option>
+                                <option>Sjef, avd. Kristiansand</option>
+                                <option>Kokk</option>           
+                                <option>Servitør</option>           
+                                <option>Telefonansvarlig</option>           
+                                <option>Leverandør</option>          
+                            </select>
+                        </div>
+
+                        <div class="buttons">
+                            <button id="change-button" class="button">Endre posisjon</button>
+                        </div>               
+                </div>
+        </article>
+        `;
+        changeEmployeeFunction.innerHTML = htmlTxt;
+
     }
 
-    removeEmployee();
+    
+
+    const modifyEmployeeButton = () => {
+        
+        
+        const nameInput = document.querySelector("#employee-input");
+        let name = nameInput;
+
+        const positionInput = document.querySelector("#position-input-modify");
+        let position = positionInput;
+
+
+        document.querySelectorAll("#change-button").forEach( button => {
+            button.addEventListener("click", ( e ) => {
+                let htmlTxt = "";
+
+                name = nameInput.options[nameInput.selectedIndex].text;
+                position = positionInput.options[positionInput.selectedIndex].text;
+                
+                document.getElementById(`${name}`).remove(); //Fjerner først gamle input
+                
+                //Legger til ny
+                htmlTxt += `
+                <article id="${name}" class="column is-4 has-text-centered">
+                    <img src="../Images/employees/${name}.jpeg" alt="Photo of ${name}">
+                    
+                    <h3 class="title is-3">${name}</h3>
+                    <p class="subtitle is-5">${position}</p>
+                </article>
+                `;
+                employeeSection.innerHTML += htmlTxt;
+            })
+        }) 
+    }
+
+    modifyEmployee();
+    modifyEmployeeButton();
