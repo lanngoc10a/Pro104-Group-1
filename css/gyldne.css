@@ -1,0 +1,13 @@
+.box {
+  color: white;
+  background-color: #0069b3;
+  max-width: 700px;
+}
+
+.header {
+  font-size: x-large;
+}
+
+.lare-button {
+  padding: 10px 40px;
+}
