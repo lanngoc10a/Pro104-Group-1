@@ -10,7 +10,7 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
     />
     <link rel="stylesheet" href="../css/gyldne.css" />
-    <!-- <meta http-equiv="refresh" content="3" /> -->
+   
   </head>
 
 <!--navbar-->>
@@ -30,16 +30,28 @@
 
 
   <body>
-    <div class="container">
-      <img src="../Images/Om Gyldne/cookmann.jpg" width="700" height="10" />
-      <div class="centered img-text">Om oss</div>
-    </div>
-    <div class="page">
+     <div class="page">
       <title>Gyldne Pizza</title>
       <h1>Norsk Pizza Drømme</h1>
       <h1 class="is-col-8-desktop txt-center txt-white padding-bottom">
         Om oss
       </h1>
+
+      <h2>background-size: auto (default):</h2>
+
+      <div class="container">
+      <div id="example1">
+        <h2>Hello World</h2>
+        <p>The background image is displayed in its original size.</p>
+        <img src="../Images/Om Gyldne/cookmann.jpg" width="700" height="10" />
+        <div class="centered img-text">Om oss</div>
+      </div>
+    </div>
+
+    <div id="page-background"><img src="../Images/Om Gyldne/cookmann.jpg" width="100%" height="100%" alt="Smile"></div>
+
+  
+
       <div>
         Gyldne Pizza starter way back i Italia. Ekteparet Louis og Anne Jordan
         hadde bestemt seg for å flytte til Norge og tilbake til Annes Norwegian
@@ -49,30 +61,31 @@
           han kunne lansere? Anne fikk en idé:
         </p>
         <p>- Honey, don’t ya think Norwegians would love pizza? sa hun.</p>
+
         <div class="box">
-          <div class="header">Historien om Gyldne Pizza</div>
-          <p>
-            Vår lidenskap for italiensk mat kan spores tilbake til grunnleggeren Peter Boizot og hans kjærlighetsaffære med Italia. Misfornøyd med pizzaen i London, fraktet han over en autentisk ovn, slo ned en vegg for å presse den inn og åpnet vår aller første restaurant på Wardour Street. 
-          </p>
-          <img
-            src="../Images/Om Gyldne/Peterboizot1.jpg"
-            width="300"
-            height="204"
-          />
-          <img
-            src="../Images/Om Gyldne/Peterboizot2.jpg"
-            width="300"
-            height="204"
-          />
-          <input
-            class="lare-button"
-            id="buy-emerald-btn"
-            type="button"
-            value="Lær mer"
-          />
+        <div class="smallbox">
+          <div class="header">Vår histori</div>
         </div>
+          <div>
+            Vår lidenskap for italiensk mat kan spores tilbake til grunnleggeren Peter Boizot og hans kjærlighetsaffære med Italia. Misfornøyd med pizzaen i Norge, fraktet han over en autentisk ovn, slo ned en vegg for å presse den inn og åpnet vår aller første restaurant på Wardour Street. 
+            Louis hadde fått servert sin Norwegian Dream; nemlig pizza – the italiensk way. Det manglet verken på hunger eller guts, så han begynte umiddelbart the hard work med å gjøre sin nye pizza passion om til fremtid. For å sluke så mye pizza knowledge som mulig, tok han seg jobb på pizzarestauranten “Pepe Pizzeria” i Connecticut. Tilbake i Norge brukte Louis denne kunnskapen som inspirasjon til å skape en ny og unik amerikansk pizza. ”Peppes Pizza Pub” som vi først het, åpnet dørene for første gang i mai 1970 på Solli. Resten er norsk pizzahistorie. Og det gleder oss at du er en del av den.        
+          </div>
+       
+          <img
+          src="../Images/Om Gyldne/Peterboizot1.jpg"
+          width="700"
+          height="204"
+        />
+        <div class="buttons has-addons is-centered">
+          <button class="button is-medium">Lære mer</button>
+        </div>
+           </div>
+         
         <div class="box">
-          <div class="header">Environmental Sustainability</div>
+        <div class="smallbox">
+          <div class="header">Bærekraftig miljø</div>
+        </div>
+
           <div>
             Utviklingen av disse gode retningslinjer for landbrukspraksis har
             vært basert på en grundig evaluering av potensiell agronomisk
@@ -93,15 +106,17 @@
             width="700"
             height="204"
           />
-          <input
-            class="lare-button"
-            id="buy-emerald-btn"
-            type="button"
-            value="Lær mer"
-          />
+
+          <div class="buttons has-addons is-centered">
+          <button class="button is-medium">Lære mer</button>
         </div>
+      </div>
+
+
         <div class="box">
-          <div class="header">Corporate Social Reponsibility</div>
+        <div class="smallbox">
+          <div class="header">Samfunnsansvar</div>
+        </div>
           <div>
             Å være åpen for forretninger betyr mer enn en varm ovn og ferske
             ingredienser. Det handler om å være en del av samfunnet, gi noe
@@ -115,7 +130,7 @@
             partnerskap med Macmillan Cancer Support. Februar 2018 markerte en
             veldig spesiell milepæl i vårt partnerskap - med din støtte samlet
             vi inn 1 million pund.
-          </div>
+        
           <br>
           <br>
           <img
@@ -124,13 +139,13 @@
             height="204"
           />
 
-          <input
-            class="lare-button"
-            id="buy-emerald-btn"
-            type="button"
-            value="Lær mer"
-          />
+          <div class="buttons has-addons is-centered">
+            <button class="button is-medium">Lære mer</button>
+          </div>
         </div>
+      </div>
+
+
       </div>
       <p>
         Idag er vår board of director: Allan Leighton, Group Chairman Allan
@@ -139,7 +154,7 @@
         Halliwell, Chief Customer Officer Kate Daines, People Director
       </p>
 
-      <h3>Corporate Social Reponsibility</h3>
+     
     </div>
   </body>
 </html>

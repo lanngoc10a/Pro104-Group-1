@@ -4,12 +4,26 @@
   max-width: 800px;
 }
 
-.box {
+#example1 {
+  border: 2px solid black;
+  padding: 25px;
+  background: url(Images/Om Gyldne/cookmann.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+ 
+
+.smallbox {
   color: white;
   background-color: #e39f04;
   max-width: 700px;
 }
 
+.box {
+  color: black;
+  background-color: white;
+  max-width: 900px;
+}
 .header {
   font-size: x-large;
 }
