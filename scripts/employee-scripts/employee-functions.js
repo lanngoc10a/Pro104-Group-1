@@ -103,19 +103,23 @@
                 if(gender === "Mann"){
                     employeeSection.innerHTML += `
                     <article class="column is-4 has-text-centered">
-                        <img src="../Images/employees/male-employee.jpeg" alt="Photo of ${name}">
-                        
-                        <h3 class="title is-3">${name}</h3>
-                        <p class="subtitle is-5">${position}</p>
+                        <div class="card">
+                            <img src="../Images/employees/male-employee.jpeg" alt="Photo of ${name}">
+                            
+                            <h3 class="title is-3">${name}</h3>
+                            <p class="subtitle is-5 mb-2">${position}</p>
+                        </div>
                     </article>
                 `; 
                 }else if(gender === "Kvinne"){
                     employeeSection.innerHTML += `
                     <article class="column is-4 has-text-centered">
-                        <img src="../Images/employees/female-employee.jpeg" alt="Photo of ${name}">
-                        
-                        <h3 class="title is-3">${name}</h3>
-                        <p class="subtitle is-5">${position}</p>
+                        <div class="card">
+                            <img src="../Images/employees/female-employee.jpeg" alt="Photo of ${name}">
+                            
+                            <h3 class="title is-3">${name}</h3>
+                            <p class="subtitle is-5 mb-2">${position}</p>
+                        </div>
                     </article>
                 `; 
                 }
@@ -143,10 +147,12 @@
                 EmployeeModule.getEmployeeByLocation( location ).forEach( employee => {
                     htmlTxt += `
                     <article id="${employee.name}" class="column is-4 has-text-centered">
-                    <img src="../Images/employees/${employee.image}" alt="Photo of ${employee.name}">
-                    
-                    <h3 class="title is-3">${employee.name}</h3>
-                    <p class="subtitle is-5">${employee.position}</p>
+                        <div class="card">
+                            <img src="../Images/employees/${employee.image}" alt="Photo of ${employee.name}">
+                            
+                            <h3 class="title is-3">${employee.name}</h3>
+                            <p class="subtitle is-5 mb-2">${employee.position}</p>
+                        </div>
                     </article>
                     `; 
                 })
@@ -162,10 +168,12 @@
                 EmployeeModule.getEmployeeByLocation( location ).forEach( employee => {
                     htmlTxt += `
                     <article id="${employee.name}" class="column is-4 has-text-centered">
-                    <img src="../Images/employees/${employee.image}" alt="Photo of ${employee.name}">
-                    
-                    <h3 class="title is-3">${employee.name}</h3>
-                    <p class="subtitle is-5">${employee.position}</p>
+                        <div class="card">
+                            <img src="../Images/employees/${employee.image}" alt="Photo of ${employee.name}">
+                            
+                            <h3 class="title is-3">${employee.name}</h3>
+                            <p class="subtitle is-5 mb-2">${employee.position}</p>
+                        </div>
                     </article>
                     `; 
                 })
@@ -181,10 +189,12 @@
                 EmployeeModule.getEmployeeByLocation( location ).forEach( employee => {
                     htmlTxt += `
                     <article id="${employee.name}" class="column is-4 has-text-centered">
-                    <img src="../Images/employees/${employee.image}" alt="Photo of ${employee.name}">
-                    
-                    <h3 class="title is-3">${employee.name}</h3>
-                    <p class="subtitle is-5">${employee.position}</p>
+                        <div class="card">
+                            <img src="../Images/employees/${employee.image}" alt="Photo of ${employee.name}">
+                            
+                            <h3 class="title is-3">${employee.name}</h3>
+                            <p class="subtitle is-5 mb-2">${employee.position}</p>
+                        </div>
                     </article>
                     `; 
                 })
@@ -200,10 +210,12 @@
                 EmployeeModule.getAllEmployees().forEach( employee => {
                     htmlTxt += `
                         <article id="${employee.name}" class="column is-4 has-text-centered">
-                            <img src="../Images/employees/${employee.image}" alt="Photo of ${employee.name}">
-                            
-                            <h3 class="title is-3">${employee.name}</h3>
-                            <p class="subtitle is-5">${employee.position}</p>
+                            <div class="card">
+                                <img src="../Images/employees/${employee.image}" alt="Photo of ${employee.name}">
+                                
+                                <h3 class="title is-3">${employee.name}</h3>
+                                <p class="subtitle is-5 mb-2">${employee.position}</p>
+                            </div>
                         </article>
                     `; 
                 })
@@ -337,10 +349,12 @@
                 //Legger til ny input
                 htmlTxt += `
                 <article id="${name}" class="column is-4 has-text-centered">
-                    <img src="../Images/employees/${name}.jpeg" alt="Photo of ${name}">
-                    
-                    <h3 class="title is-3">${name}</h3>
-                    <p class="subtitle is-5">${position}</p>
+                    <div class="card">    
+                        <img src="../Images/employees/${name}.jpeg" alt="Photo of ${name}">
+                        
+                        <h3 class="title is-3">${name}</h3>
+                        <p class="subtitle is-5 mb-2">${position}</p>
+                    </div>     
                 </article>
                 `;
                 employeeSection.innerHTML += htmlTxt;
