@@ -7,13 +7,13 @@
 .smallbox {
   color: white;
   background-color: #e39f04;
-  max-width: 700px;
+  max-width: 800px;
 }
 
 .box {
   color: black;
   background-color: white;
-  max-width: 900px;
+  max-width: 1000px;
 }
 .header {
   font-size: x-large;
@@ -41,4 +41,8 @@
 
 .box-text {
   text-align: center;
+}
+
+.content-text {
+  padding: 10px 30px;
 }
