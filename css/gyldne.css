@@ -1,0 +1,48 @@
+.page {
+  padding: 10px;
+  margin: auto;
+  max-width: 800px;
+}
+
+.smallbox {
+  color: white;
+  background-color: #e39f04;
+  max-width: 800px;
+}
+
+.box {
+  color: black;
+  background-color: white;
+  max-width: 1000px;
+}
+.header {
+  font-size: x-large;
+}
+
+.img-text {
+  font-size: xx-large;
+}
+
+.lare-button {
+  padding: 10px 40px;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box-text {
+  text-align: center;
+}
+
+.content-text {
+  padding: 10px 30px;
+}

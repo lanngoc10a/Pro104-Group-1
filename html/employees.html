@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/employees.css">
+
     <script type="module" src="../scripts/employee-scripts/employee-generator.js"></script>
     <script type="module" src="../scripts/employee-scripts/employee-functions.js"></script>
-
+    
     <title>Ansatte</title>
 </head>
 <body>
@@ -20,8 +23,8 @@
             <div class="column">
 
                 
-                
-                <section id="title-locations" class="columns is-6 is-multiline mb-5">
+                <!-- Logo/Header/Tekst -->
+                <section class="columns is-6 is-multiline mb-5">
 
                     <section class="column has-text-left">
                         <div>
@@ -34,10 +37,18 @@
                     <!-- Klikkbare Lokasjoner -->
                     <section class="column has-text-right">
                         <div>
-                            <a id="oslo" class="title is-1">Oslo</a>
-                            <p class="title is-1">Stavanger</p>
-                            <a id="kristiansand" class="title is-1">Kristiansand</a>
-                            <p class="title is-1">Alle våre ansatte</p>
+                            <a>
+                                <h3 id="oslo" class="title is-1">Oslo</h3>
+                            </a>
+                            <a>
+                                <h3  id="stavanger" class="title is-1">Stavanger</h3>
+                            </a>
+                            <a>
+                                <h3 id="kristiansand" class="title is-1">Kristiansand</h3>
+                            </a>
+                            <a>
+                                <h3 id="alle-ansatte" class="title is-1">Alle våre ansatte</h3>
+                            </a>
                         </div>
                     </section>
 
@@ -51,26 +62,16 @@
                     
                 </section>
 
+
+                
                 <!-- Funksjoner -->
-                <section class="columns">
+                <section class="columns mb-4">
+  
+                        <div id="employee-function" class="column"></div>
 
-                    
+                        <div id="remove-employee-function" class="column"></div>
                         
-                        <div id="employee-function" class="column has-background-info is-4">
-                            
-                        
-                        </div>
-
-                        <div id="remove-employee-function" class="column">
-                            
-                        </div>
-
-                        
-
-
-                        
-
-                   
+                        <div id="change-employee-function" class="column"></div>
 
                 </section>
 
@@ -83,99 +84,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-    <section id="function-section" class="columns">
-
-                    <div class="column is-8">
-                        
-                        <div class="columns has-background-info">
-                    
-                    <article class="column is-3">
-                        <div class="field">
-                            <label class="label">Fullt navn</label>  
-                            <p class="control has-icons-left has-icons-right">
-                                <input class="input" type="text" placeholder="e.g Olav Nilsen">
-                                <span class="icon is-small is-right">
-                                    <i class="fas fa-check"></i>
-                                </span>
-                                <span class="icon is-small is-left">
-                                    <i class="fas fa-user"></i>
-                                </span>
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="column is-3">
-                        <div class="field">
-                            <label class="label">Kjønn</label> 
-                            <p class="control has-icons-left has-icons-right">
-                                <div class="select">
-                                    <select>
-                                        <option>Velg kjønn</option>
-                                        <option>Mann</option>
-                                        <option>Kvinne</option>           
-                                    </select>
-                                </div>
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="column is-3">
-                        <div class="field">
-                            <label class="label">Posisjon</label> 
-                            <p class="control has-icons-left has-icons-right">
-                                <div class="select">
-                                    <select>
-                                        <option>Velg posisjon</option>
-                                        <option>Sjef, avd. Kristiansand</option>
-                                        <option>Kokk</option>           
-                                        <option>Servitør</option>           
-                                        <option>Telefonansvarlig</option>           
-                                        <option>Leverandør</option>           
-                                    </select>
-                                </div>
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="column is-3">
-                        <label class="label"> Knapp</label>
-                        <div class="buttons">
-                            <button class="button ">Legg til ny ansatt</button>
-                        </div>
-                    </article>
-
-                </div>
-                </div> 
-                          
-                    
-                
-
-
-                </section>
- -->
