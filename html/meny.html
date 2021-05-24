@@ -8,331 +8,79 @@
     <!-- css -->
     <link rel="stylesheet" href="../css/meny.css">
     <!-- script -->
-    <script src = "../scripts/meny.js" defer></script>
+    <script src = "../scripts/meny-scripts/meny.js" defer></script>
+    <script type="module" src="../scripts/meny-scripts/meny-functions.js"></script>
+    
+
     <title>MENY</title>
 
 </head>
 <body>
-   
-    
+    <nav class="navbar has-shadow is-white">
 
-<!--navbar-->>
-<nav class="navbar has-shadow is-white">
-
-    <div class="navbar-menu" id="nav-links">
-        <div class="navbar-start">
-            <a href="" class="navbar-item">Forside</a>
-            <a href="../html/meny.html" class="navbar-item">Meny</a>
-            <a href="../html/employees.html" class="navbar-item">Ansatte</a>
-            <a href="../html/salg.html" class="navbar-item">Salg</a>
-            <a href="" class="navbar-item">Oppskrift</a>
-        </div>
-    </div>
-</nav>
-
-<h1 class="is-size-1 has-text-centered">GYLDNE PIZZA</h1>
-
-<br>
-<br>
- 
-      <!--om brus, salat og pizza-->
-      <div class="tabs is-centered is-boxed is-large">
-          <ul>
-              <li class="is-active" data-target="alle-info">
-              <a>Legg til +</a></li>
-              <li data-target="pizza-info"><a>PIZZA</a></li>
-              <li data-target="salat-info"><a>SALAT</a></li>
-              <li data-target="drikke-info"><a>BRUS</a></li>
-          </ul>
-      </div>
-      <!--Ønske om flere oppskrifter og slette -->
-      <div class="px-2" id="tab-content">
-         <div id="alle-info">
-          <h2>Legg inn oppskrift ønsker</h2>
-          <labe>Navn</labe>
-          <input id="add-tittel-txt" type="text">
-          <label>Legg inn ønsket:</label>
-          <input id="add-recipe-txt" type="text">
-          <input id ="add-recipe-btn" type="button" value="Legg til +">
-          <ul id="add-recipe-ul"></ul>
-          </div>
-<!--Salat-->
-          <div id="salat-info" class="is-hidden">
-              <div class="container">
-                <main class="columns">
-                <h3 class="title-has-text-centered is-size-4">SALAT</h3>
-    
-                <div class="columns mt-6 is-8 is-centered is-multiline">
-                    <div class="column is-4-tablet is-3-desktop">
-                        <div class="card">
-                            <div class="card-image has-text-centered px-6">
-                                <img class="images" src="../Images/meny/PestoSalad.png">
-                            </div>
-                            <div class="card-content">
-                                <p>pris 90,-</p>
-                                <p class="title is size-6">Pesto Salat</p>
-                                <p>Inneholder: Hvete, melk</p>
-                            </div>
-    
-                        </div>
-                    </div>
-                        <div class="column is-4-tablet is-3-desktop">     
-                        <div class="card">
-                            <div class="card-image has-text-centered px-6">
-                                <img class="images" src="../Images/meny/middelSalad.png">
-                            </div>
-                            <div class="card-content">
-                                <p>pris 90,-</p>
-                                <p class="title is size-6">Gresk Salat</p>
-                                <p>Inneholder: Sennep</p>
-                            </div>
-                          
-                         </div>
-                     </div>
-                        
-                    
-                        <div class="column is-4-tablet is-3-desktop">    
-                        <div class="card">
-                            <div class="card-image has-text-centered px-6">
-                                <img class="images" src="../Images/meny/avokadosalad.png">
-                            </div>
-                            <div class="card-content">
-                                <p>pris 90,-</p>
-                                <p class="title is size-6">Avokado Salat</p>
-                                <p>Inneholder: Hvete, bygg, egg, melk</p>
-                            </div>
-                         
-                        </div>
-                        </div>
-    
-                        <div class="column is-4-tablet is-3-desktop">   
-                        <div class="card">
-                            <div class="card-image has-text-centered px-6">
-                                <img class="images" src="../Images/meny/nachoSalad.png">
-                            </div>
-                            <div class="card-content">
-                                <p>pris 90,-</p>
-                                <p class="title is size-6">Nachos Salat</p>
-                                <p>Inneholder: Hvete, bygg, egg, melk</p>
-                            </div>
-                           
-                        </div>
-                        </div>
-    
-
-                    </div>
-                </div>
+        <div class="navbar-menu" id="nav-links">
+            <div class="navbar-start">
+                <a href="" class="navbar-item">Forside</a>
+                <a href="" class="navbar-item">Meny</a>
+                <a href="" class="navbar-item">Ansatte</a>
+                <a href="" class="navbar-item">Salg</a>
+                <a href="" class="navbar-item">Oppskrift</a>
             </div>
-        </main>
-<!--Slutt på salater-->
-           
+        </div>
+    </nav>
+        
+     
+    <main class="container">
 
-<!--Pizzaa-->
-           <div id="pizza-info" class="is-hidden">
+        <article class="columns">
            
-                <div class="container">
-                    <main class="columns">
-                    <h3 class="title-has-text-centered is-size-4">PIZZA</h3>
-        
-                    <div class="columns mt-6 is-8 is-centered is-multiline">
-                        <div class="column is-4-tablet is-3-desktop">
-                            <div class="card">
-                                <div class="card-image has-text-centered px-6">
-                                    <img class="images" src="../Images/meny/Margherita.jpg">
-                                </div>
-                                <div class="card-content">
-                                    <p>pris 120,-</p>
-                                    <p class="title is size-6">Margherita</p>
-                                    <p> Inneholder: Hvete, melk</p>
-                                    <button class="button is-fullwidth recipe">Se oppskrift</button>
-                                </div>
-        
-                            </div>
-                        </div>
-                            <div class="column is-4-tablet is-3-desktop">     
-                            <div class="card">
-                                <div class="card-image has-text-centered px-6">
-                                    <img class="images" src="../Images/meny/BBQBeef.PNG">
-                                </div>
-                                <div class="card-content">
-                                    <p>pris 120,-</p>
-                                    <p class="title is size-6">BBQ Beef</p>
-                                    <p> Inneholder: Hvete, melk, sennep</p>
-                                </div>
-                              
-                             </div>
-                         </div>
-                            
-                        
-                            <div class="column is-4-tablet is-3-desktop">    
-                            <div class="card">
-                                <div class="card-image has-text-centered px-6">
-                                    <img class="images" src="../Images/meny/Cheese.PNG">
-                                </div>
-                                <div class="card-content">
-                                    <p>pris 120,-</p>
-                                    <p class="title is size-6">Cheese</p>
-                                    <p>Inneholder: Hvete, melk</p>
-                                </div>
-                            </div>
-                            </div>
-        
-                            <div class="column is-4-tablet is-3-desktop">   
-                            <div class="card">
-                                <div class="card-image has-text-centered px-6">
-                                    <img class="images" src="../Images/meny/KnockOut.PNG">
-                                </div>
-                                <div class="card-content">
-                                    <p>pris 120,-</p>
-                                    <p class="title is size-6">Knock Out</p>
-                                    <p> Inneholder: Hvete, melk</p>
-                                </div>
-                            </div>
-                            </div>
-        
-                            <div class="column is-4-tablet is-3-desktop"> 
-                            <div class="card">
-                                <div class="card-image has-text-centered px-6">
-                                    <img class="images" src="../Images/meny/Pepperoni.PNG">
-                                </div>
-                                <div class="card-content">
-                                    <p>pris 120,-</p>
-                                    <p class="title is size-6">Pepperoni</p>
-                                    <p> Inneholder: Hvete, melk</p>
-                                </div>
-                            </div>
-                            </div>
-        
-                            <div class="column is-4-tablet is-3-desktop">     
-                            <div class="card">
-                                <div class="card-image has-text-centered px-6">
-                                    <img class="images" src="../Images/meny/Skinke.PNG">
-                                </div>
-                                <div class="card-content">
-                                    <p>pris 120,-</p>
-                                    <p class="title is size-6">Skinke</p>
-                                    <p> Inneholder: Hvete, melk</p>
-                                </div>
-                            </div>
-                            </div>
-        
-                            <div class="column is-4-tablet is-3-desktop">   
-                            <div class="card">
-                                <div class="card-image has-text-centered px-6">
-                                    <img class="images" src="../Images/meny/SpicyChicken.PNG">
-                                </div>
-                                <div class="card-content">
-                                    <p>pris 120,-</p>
-                                    <p class="title is size-6">Spicy Chicken</p>
-                                    <p> Inneholder: Hvete, melk</p>
-                                </div>
-                               
-                            </div>
-                            </div>
-        
-                            <div class="column is-4-tablet is-3-desktop"> 
-                            <div class="card">
-                                <div class="card-image has-text-centered px-6">
-                                    <img class="images" src="../Images/meny/GreenDay.PNG">
-                                </div>
-                                <div class="card-content">
-                                    <p>pris 120,-</p>
-                                    <p class="title is size-6">Green Day</p>
-                                    <p> Inneholder: Hvete, melk</p>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </main>
-             <!--slutt på pizza-->
-        
-             <!--Bruss-->
-             <div id="drikke-info" class="is-hidden">
-            <div class="container">
-                <main class="columns">
-                <h3 class="title-has-text-centered is-size-4">BRUS</h3>
-    
+            <div class="column">
+
                 
-               
-                <div class="columns mt-6 is-8 is-centered is-multiline">
-                    <div class="column is-4-tablet is-3-desktop">
-                        <div class="card">
-                            <div class="card-image has-text-centered px-6">
-                                <img class="images" src="../Images/meny/zero.png">
-                            </div>
-                            <div class="card-content">
-                                <p>pris 49,-</p>
-                                <p class="title is size-6">Cola Zero</p>
-    
-                            </div>
-    
-                        </div>
-                    </div>
-                        <div class="column is-4-tablet is-3-desktop">     
-                        <div class="card">
-                            <div class="card-image has-text-centered px-6">
-                                <img class="images" src="../Images/meny/cocacola.png">
-                            </div>
-                            <div class="card-content">
-                                <p>pris 49,-</p>
-                                <p class="title is size-6">Coca Cola</p>
-                              
-                            </div>
-                          
-                         </div>
-                     </div>
-                        
-                    
-                        <div class="column is-4-tablet is-3-desktop">    
-                        <div class="card">
-                            <div class="card-image has-text-centered px-6">
-                                <img class="images" src="../Images/meny/sprite.png">
-                            </div>
-                            <div class="card-content">
-                                <p>pris 49,-</p>
-                                <p class="title is size-6">Sprite</p>
-                            </div>
+                <section id="title-locations" class="columns is-6 is-multiline mb-5">
+                  
+
+                   
+
+                    <!-- Klikkbare Lokasjoner -->
+                    <section class="column has-text-centered">
+                       
+                        <div class="tabs is-centered is-large">
+                            <a id="meny" class="title is-1">Alle</a>
+                            <a id="Pizza" class="title is-1">Pizza</a>
+                            <a id="Salat" class="title is-1">Salat</a>
+                            <a id="Drikker" class="title is-1">Drikker</a>
                             
                         </div>
-                        </div>
-    
-                        <div class="column is-4-tablet is-3-desktop">   
-                        <div class="card">
-                            <div class="card-image has-text-centered px-6">
-                                <img class="images" src="../Images/meny/ol.png">
-                            </div>
-                            <div class="card-content">
-                                <p>pris 79,-</p>
-                                <p class="title is size-6">Øl</p>
-                            </div>
-                           
-                        </div>
-                        </div>
-    
+                    </section>
+
+                </section>
+                <!-- Meny -->
+                <section id="meny-section" class="columns is-centered is-multiline">
+                    
+                </section>
+
+                <!-- Funksjoner -->
+                <section class="columns">
+                    
+                        <div id="meny-function" class="column"></div>
+
+                        <div id="remove-meny-function" class="column"></div>
+
+                        <div id="change-meny-function" class="column"></div>
 
                     </div>
-                </div>
+                    </div>
+                </section>
+
+          
+
             </div>
-        </main>
-           <!--Slutt på Bruss-->
-               </div>
-         </div>
-        </div>
 
-    <!--modal-->
-    <!-- modal til oppskrift -->
-  <div class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-content has-background-white py-5 px-5">
-        <h3 class="title mb-6">Oppskrift</h3>
-    </div>
-</div>
+        </article>
+    </main>
 
-    
-
+   
 </body>
 </html>
-
 
