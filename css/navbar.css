@@ -3,7 +3,7 @@
     padding: 0 ;
 }
 
-.navbar {
+.navbar-top {
     background-color: #e39f04;
     width: 100%;
     height: 4rem;
@@ -21,7 +21,7 @@
 
 }
 
-li {
+.navbar-top li {
     list-style: none;
     margin: 0;
     height: 100%;
@@ -30,18 +30,18 @@ li {
     position: relative;
 }
 
-li:hover {
+.navbar-top li:hover {
     background-color: #fee247;
 }
 
-li:active {
+.navbar-top li:active {
     background-color: #ccb73e;
 }
 
-a {
+.navbar-top a {
     color:rgb(255, 255, 255);
     font-size: 1.5rem;
-    font-family: 'Roboto', sans-serif;;
+    font-family: 'Roboto', sans-serif;
     text-decoration: none;
     margin: 0;
     position: absolute;

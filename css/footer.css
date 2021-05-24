@@ -1,0 +1,14 @@
+.footer-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-header {
+    font-family: 'Roboto', sans-serif;;
+}
+
+footer li {
+    font-family: 'Roboto', sans-serif;;
+    color: #e39f04;
+}
