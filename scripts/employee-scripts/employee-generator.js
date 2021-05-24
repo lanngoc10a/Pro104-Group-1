@@ -11,10 +11,12 @@ import EmployeeModule from '../../Modules/EmployeeModule.js'
         EmployeeModule.getAllEmployees().forEach( employee => {
             htmlTxt += `
                 <article id="${employee.name}" class="column is-4 has-text-centered">
-                    <img src="../Images/employees/${employee.image}" alt="Photo of ${employee.name}">
-                    
-                    <h3 class="title is-3">${employee.name}</h3>
-                    <p class="subtitle is-5">${employee.position}</p>
+                    <div class="card">
+                        <img src="../Images/employees/${employee.image}" alt="Photo of ${employee.name}">
+                        
+                        <h3 class="title is-3">${employee.name}</h3>
+                        <p class="subtitle is-5 mb-2">${employee.position}</p>
+                    </div>
                 </article>
             `; 
         })
