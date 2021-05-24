@@ -5,10 +5,16 @@
 }
 
 .footer-header {
-    font-family: 'Roboto', sans-serif;;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
 }
 
 footer li {
     font-family: 'Roboto', sans-serif;;
     color: #e39f04;
 }
+
+.footer-links a{
+    color: white;
+}
+
