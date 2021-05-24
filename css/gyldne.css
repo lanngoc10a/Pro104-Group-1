@@ -1,17 +1,8 @@
 .page {
-    padding: 10px;
+  padding: 10px;
   margin: auto;
   max-width: 800px;
 }
-
-#example1 {
-  border: 2px solid black;
-  padding: 25px;
-  background: url(Images/Om Gyldne/cookmann.jpg);
-  background-repeat: no-repeat;
-  background-size: auto;
-}
- 
 
 .smallbox {
   color: white;
@@ -46,4 +37,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.box-text {
+  text-align: center;
 }
