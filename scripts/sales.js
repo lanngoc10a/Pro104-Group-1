@@ -1,4 +1,3 @@
-import MenyModule from "../Modules/MenyModule.js"
 import SalesModule from "../Modules/SalesModule.js"
 /* html elementer */
 const salesOutput = document.querySelector("#sales-info")
@@ -207,12 +206,18 @@ function percentOf(x, y) {
 
 function generateDropdown() {
     let html = "";
-    
-    let menuItems = MenyModule.getAllMeny();
-
+    let menuItems = [
+        "pizza 1",
+        "pizza 2",
+        "pizza 3",
+        "pizza 4",
+        "calzone",
+        "øl",
+        "brus"
+    ]
     menuItems.forEach(element => {
         html+= `
-            <option value="${element.name}"> ${element.name} </option>
+            <option value="${element}"> ${element} </option>
         `
     })
 
