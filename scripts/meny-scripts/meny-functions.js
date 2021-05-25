@@ -19,11 +19,11 @@ import MenyModule from '../../Modules/MenyModule.js'
                 MenyModule.getAllMeny().forEach( meny => {
                     htmlTxt += `
                         <article id="${meny.name}" class="column is-3 has-text-centered">
+                            <div class="card">
                             <img class="images" src="../Images/meny/${meny.image}" alt="Photo of ${meny.name}">
                             <p class="subtitle is-6"> pris: ${meny.price} ,-</p>
                             <h3 class="title is-3">${meny.name}</h3>
-                        
-                         
+                            </div>
                         </article>
                     `; 
                 })
@@ -37,11 +37,12 @@ import MenyModule from '../../Modules/MenyModule.js'
                 MenyModule.getMenyByType( type ).forEach( meny => {
                     htmlTxt += `
                     <article id="${meny.name}" class="column is-3 has-text-centered">
-                    
+                    <div class="card">
                     <img class="images" src="../Images/meny/${meny.image}" alt="Photo of ${meny.name}">
                     <p class="subtitle is-6"> Pris: ${meny.price} ,-</p>
                     <h3 class="title is-3">${meny.name}</h3>
                     <p class="subtitle is-6"> Inneholder: ${meny.recipe}</p>
+                    </div>
                     </article>
                     `; 
                 })
@@ -57,10 +58,12 @@ import MenyModule from '../../Modules/MenyModule.js'
                 MenyModule.getMenyByType( type ).forEach( meny => {
                     htmlTxt += `
                     <article id="${meny.name}" class="column is-3 has-text-centered">
+                    <div class="card">
                     <img class="images" src="../Images/meny/${meny.image}" alt="Photo of ${meny.name}">
                     <p class="subtitle is-6"> Pris: ${meny.price} ,-</p>
                     <h3 class="title is-3">${meny.name}</h3>
                     <p class="subtitle is-6"> Innholder: ${meny.recipe}</p>
+                    </div>
                     </article>
                     `; 
                 })
@@ -77,9 +80,11 @@ import MenyModule from '../../Modules/MenyModule.js'
                 MenyModule.getMenyByType( type ).forEach( meny => {
                     htmlTxt += `
                     <article id="${meny.name}" class="column is-3 has-text-centered">
+                    <div class="card">
                     <img  class="images" src="../Images/meny/${meny.image}" alt="Photo of ${meny.name}">
                     <p class="subtitle is-6"> Pris: ${meny.price} ,-</p>
                     <h3 class="title is-3">${meny.name}</h3>
+                    </div>
                     </article>
                     `; 
                 })
@@ -95,11 +100,11 @@ import MenyModule from '../../Modules/MenyModule.js'
                 MenyModule.getAllMeny().forEach( meny => {
                     htmlTxt += `
                         <article id="${meny.name}" class="column is-3 has-text-centered">
+                            <div class="card">
                             <img class="images" src="../Images/meny/${meny.image}" alt="Photo of ${meny.name}">
                             <p class="subtitle is-6"> pris: ${meny.price} ,-</p>
                             <h3 class="title is-3">${meny.name}</h3>
-                        
-                         
+                            </div>
                         </article>
                     `; 
                 })
@@ -246,10 +251,12 @@ import MenyModule from '../../Modules/MenyModule.js'
                 //Legger til ny input
                 htmlTxt += `
                 <article id="${name}" class="column is-4 has-text-centered">
+                    <div class="card">
                     <img class="images" src="../images/meny/${name}.png" alt="Photo of ${name}">
                     <p class="subtitle is-6">Pris: ${price} ,- </p>
                     <h3 class="title is-3">${name}</h3>
                     <p class="subtitle is-6"> Inneholder: ${recipe}</p>
+                    </div>
                 </article>
                 `;
                 menySection.innerHTML += htmlTxt;
@@ -365,29 +372,34 @@ const addMenyButton = () => {
             if(type === "Pizza"){
                 menySection.innerHTML += `
                     <article class="column is-2 has-text-centered">
-                        <img src="../Images/meny/add-new-food/Pizza.png" alt="Photo of ${name}">
+                        <div class="card">
+                        <img class="images" src="../Images/meny/add-new-food/Pizza.png" alt="Photo of ${name}">
                         <p class="subtitle is-6">Pris: ${price} ,- </p>
                         <h3 class="title is-3">${name}</h3>
                         <p class="subtitle is-6"> Inneholder: ${recipe}</p>
+                        </div>
                     </article>
                 `;
             }else if(type === "Salat"){
                 menySection.innerHTML += `
                     <article class="column is-2 has-text-centered">
-                        <img src="../Images/meny/add-new-food/en-ny-salat.png" alt="Photo of ${name}">
+                        <div class="card">
+                        <img class="images" src="../Images/meny/add-new-food/en-ny-salat.png" alt="Photo of ${name}">
                         <p class="subtitle is-6">Pris: ${price} ,- </p>
                         <h3 class="title is-3">${name}</h3>
                         <p class="subtitle is-6"> Inneholder: ${recipe}</p>
+                        </div>
                     </article>
                 `; 
              }else if (type === "Drikker"){
                 menySection.innerHTML += `
                     <article class="column is-2 has-text-centered">
-                        <img src="../Images/meny/add-new-food/ny-drikke.png" alt="Photo of ${name}">
+                        <div class="card">
+                        <img class="images" src="../Images/meny/add-new-food/ny-drikke.png" alt="Photo of ${name}">
                         <p class="subtitle is-6">Pris: ${price} ,- </p>
-                        
                         <h3 class="title is-3">${name}</h3>
                         <p class="subtitle is-6"> Inneholder: ${recipe}</p>
+                        </div>
                     </article>
                 `; 
             }   
