@@ -1,3 +1,4 @@
+import MenyModule from './MenyModule.js'
 const SalesModule = (function () {
     class Item {
         constructor(name, price, dateOfPurchase){

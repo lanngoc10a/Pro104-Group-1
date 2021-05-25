@@ -8,6 +8,7 @@ main {
     justify-content: space-evenly;
     padding:1em;
     background-color: rgb(247, 247, 247);
+    z-index: 1;
 }
 .earning-columns {
     display: flex;
