@@ -13,5 +13,19 @@
   
   .card {
   height: 100%;
+
 }
   
+.box {
+  background-color: #FBA465;
+}
+
+.button {
+  background-color: #F86E51;
+  border-color: #F86E51;
+  color: white;
+}
+
+i {
+  color: #F86E51;
+}

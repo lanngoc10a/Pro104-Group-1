@@ -38,10 +38,12 @@ import MenyModule from '../../Modules/MenyModule.js'
                     htmlTxt += `
                     <article id="${meny.name}" class="column is-3 has-text-centered">
                     <div class="card">
+                    <div class="card-image has-text-centered px-6">
                     <img class="images" src="../Images/meny/${meny.image}" alt="Photo of ${meny.name}">
                     <p class="subtitle is-6"> Pris: ${meny.price} ,-</p>
                     <h3 class="title is-3">${meny.name}</h3>
                     <p class="subtitle is-6"> Inneholder: ${meny.recipe}</p>
+                    </div>
                     </div>
                     </article>
                     `; 
@@ -59,10 +61,12 @@ import MenyModule from '../../Modules/MenyModule.js'
                     htmlTxt += `
                     <article id="${meny.name}" class="column is-3 has-text-centered">
                     <div class="card">
+                    <div class="card-image has-text-centered px-6">
                     <img class="images" src="../Images/meny/${meny.image}" alt="Photo of ${meny.name}">
                     <p class="subtitle is-6"> Pris: ${meny.price} ,-</p>
                     <h3 class="title is-3">${meny.name}</h3>
                     <p class="subtitle is-6"> Innholder: ${meny.recipe}</p>
+                    </div>
                     </div>
                     </article>
                     `; 
@@ -199,7 +203,7 @@ import MenyModule from '../../Modules/MenyModule.js'
                              <i class="fas fa-check"></i>
                          </span>
                          <span class="icon is-small is-left">
-                             <i class="fas fa-user"></i>
+                             <i class="fas fa-dollar-sign"></i>
                          </span>
                          </p>
                 </div>
@@ -211,7 +215,7 @@ import MenyModule from '../../Modules/MenyModule.js'
                                      <i class="fas fa-check"></i>
                                  </span>
                                  <span class="icon is-small is-left">
-                                     <i class="fas fa-user"></i>
+                                     <i class="fas fa-pepper-hot"></i>
                                  </span>
                                  </p>
                         </div>
