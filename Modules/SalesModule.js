@@ -1,3 +1,4 @@
+import MenyModule from "./MenyModule.js"
 const SalesModule = (function () {
     class Item {
         constructor(name, price, dateOfPurchase){
@@ -64,16 +65,8 @@ const SalesModule = (function () {
     }
     
     const randomItem = () => {
-        let menuItems = [
-            {name:"pizza 1", price: 143},
-            {name:"pizza 2", price: 210},
-            {name:"pizza 3", price: 120},
-            {name:"pizza 4", price: 193},
-            {name:"calzone", price: 155},
-            {name:"øl", price: 85},
-            {name:"brus", price: 30}
-        ]
-        let randomItemIndex = Math.floor(Math.random() * 7);
+        let menuItems = MenyModule.getAllMeny();
+        let randomItemIndex = Math.floor(Math.random() * menuItems.length);
         
         let randomDate = faker.date.between('2021-01-01', new Date().toString());
         return new Item(menuItems[randomItemIndex].name,
