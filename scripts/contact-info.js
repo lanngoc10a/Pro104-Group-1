@@ -8,8 +8,8 @@ const contactInfoSection = document.querySelector("#contact-info-section");
         EmployeeModule.getAllEmployees().forEach( employee => {
             
             htmlTxt += `
-            <section class="column is-12">
-                <article class="card p-5">
+            <section class="column is-9">
+                <article id="contact-card" class="card p-3">
                     <div class="media">
                         <div class="media-left">
                             <figure class="image is-128x128 mt-4">
@@ -20,10 +20,13 @@ const contactInfoSection = document.querySelector("#contact-info-section");
                         <div class="media-content">
                             <div class="content">
                                 <h3 class="title is-4">${employee.name}</h3>
-                                <p class="subtitle is-6">${employee.position}</p>
-                                <p class="subtitle is-6">Telefon: ${employee.phone}</p>
-                                <p class="subtitle is-6">E-post: ${employee.email}</p>
-                                <p class="subtitle is-6 mb-2">Lokasjon: ${employee.location}</p>    
+                                <p class="subtitle is-6 mb-5">${employee.position}</p>
+                                <div id="p-tagger">
+                                <p class="">Telefon: ${employee.phone}</p>
+                                <p class="">E-post: ${employee.email}</p>
+                                <p class="">Lokasjon: ${employee.location}</p>   
+                                </div>
+                                
                             </div>
                     
                     

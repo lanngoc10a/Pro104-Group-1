@@ -2,9 +2,9 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.box {
+/*.box {
     background-color: #FBA465;
-}
+}*/
 
 .button {
     background-color: #F86E51;
@@ -17,7 +17,37 @@ i {
 }
 
 
-.contact {
-    size: 100px    
+#mail-icon:hover {
+    width: 50%;
 }
 
+#id-icon:hover {
+    width: 50%;
+}
+
+
+.card-color {
+    background-color: #b7201f;
+}
+
+.box-color {
+    background-color: #ffe865;
+}
+
+#p-tagger p {
+    margin-top: -15px;
+    margin-bottom: 15px;
+    font-weight: lighter;
+}
+
+#p-tagger.box {
+    margin: 0px;
+    padding: 3px;
+    width: 300px;
+    
+}
+
+/*#locations h3{
+    color: #b7201f;
+    
+}*/
