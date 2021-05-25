@@ -1,0 +1,75 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+    padding:1em;
+    background-color: rgb(247, 247, 247);
+}
+.earning-columns {
+    display: flex;
+    justify-content: space-evenly;
+    height:200px;
+    width:100%;
+}
+.earning-column {
+    background-color: #FBA465;
+    align-self: flex-end;
+    width:5em;
+}
+
+#sales-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffff;
+    max-width: 30em;
+    padding:1em;
+    color:black;
+}
+
+.restaurant-earnings {
+    display:flex;
+    justify-content: space-evenly;
+    width:100%;
+    padding:1em;
+}
+
+#yearly-sales {
+    
+    width:28em;
+    height: 8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    background-color: #ffff;
+}
+
+.yearly-text {
+    color:#29ff69;
+}
+
+#monthly-sales {
+    height:auto;
+    width:28em;
+    padding:1em;
+    background-color: #ffff;
+}
+.monthly-column {
+    border: 1px solid rgb(255, 255, 255);
+}
+
+#sale-search {
+    background-color: white;
+    padding:1em;
+    
+    /*noe rart med width*/
+    width:15em;
+}
+.restaurant-radio {
+    margin:0.5em}
