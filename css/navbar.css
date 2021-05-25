@@ -9,12 +9,11 @@
     height: 4rem;
     position: sticky;
     top: 0;
-
 }
 
 .links {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start; /*sett til space-around hvis du heller vil ha spredt*/
     align-items: center;
     width: 100%;
     height: 100%;
@@ -25,9 +24,11 @@
     list-style: none;
     margin: 0;
     height: 100%;
-    width: 10%;
+    /*width: 10%; */ /*Gjør at teksten kan komme utenfor*/
     padding: 0 2em 0 2rem;
-    position: relative;
+    display: flex;
+    align-items: center;
+    /* position: relative; */
 }
 
 .navbar-top li:hover {
@@ -44,9 +45,8 @@
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+    
+    /* for å sentrere logoen*/
+    display: flex;
+
 }
