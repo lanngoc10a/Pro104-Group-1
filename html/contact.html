@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="../css/contact.css">
 
-    <script type="module" src="../scripts/contact-info.js"></script>
+    <script type="module" src="../scripts/contact/contact-info.js"></script>
+    <script type="module" src="../scripts/contact/contact-functions.js"></script>
 
     <title>Kontakt oss</title>
 </head>
@@ -16,24 +17,25 @@
     
     <main class="container">
 
+        <section class="column is-6">
+            
+
+        </section>
+
         <div class="columns">
-            <article class="column">
-                <h4 class="title is-4 mt-5">Sorter ansatte etter ønsket lokasjon</h4>
-                    <div id="locations" class="columns">
-                        <article class="column is-3">
-                            <h3 class="title is-4">Oslo</h3>
-                        </article>
-                        <article class="column is-3">
-                            <h3 class="title is-4">Kristiansand</h3>
-                        </article>
-                        <article class="column is-3">
-                            <h3 class="title is-4">Stavanger</h3>
-                        </article>
-                        
+            
+            <section class="column is-6 has-text-centered">
+                       
+                <div class="tabs is-centered is-large">
+                    <a id="oslo" class="title is-3">Oslo</a>
+                    <a id="kristiansand" class="title is-3">Kristiansand</a>
+                    <a id="stavanger" class="title is-3">Stavanger</a>
+                    <a id="" class="title is-3"></a>
                     
-                    </div>
-                
-            </article>
+                </div>
+
+            </section>
+
         </div>
 
 
@@ -41,9 +43,9 @@
         <div class="columns">
 
             <div class="column is-7 mb-6">
-
+                <h5 id="location-now" class="title is-5"></h5>
                 <div id="contact-info-section" class="columns is-multiline">
-        
+                    
                     
                 </div>
             </div>
@@ -58,8 +60,8 @@
                             <div class="box m-6 p-5 box-color ">
                                 <img id="id-icon" src="../Images/contact/phone-icon.png" width=100px>
                                 <h3 class="title is-3">Telefon</h3>
-                                <p>Kontakt telefonsentralen</p>
                             </div>
+                            <p>Kontakt telefonsentralen</p>
                         </div>
                     </section>
 
@@ -68,8 +70,8 @@
                             <div class="box m-6 p-5 box-color">
                                 <img id="mail-icon" src="../Images/contact/mail-icon.png" width=110px>
                                 <h3 class="title is-3">E-Post</h3>
-                                <p>Ta kontakt via E-Post</p>
                             </div>
+                            <p>Ta kontakt via E-Post</p>
                         </div>
                     </section>  
 
