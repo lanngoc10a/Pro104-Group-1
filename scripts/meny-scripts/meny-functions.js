@@ -15,6 +15,19 @@ import MenyModule from '../../Modules/MenyModule.js'
 
     const menysType = () => {
         
+        let htmlTxt = "";
+                MenyModule.getAllMeny().forEach( meny => {
+                    htmlTxt += `
+                        <article id="${meny.name}" class="column is-3 has-text-centered">
+                            <img class="images" src="../Images/meny/${meny.image}" alt="Photo of ${meny.name}">
+                            <p class="subtitle is-6"> pris: ${meny.price} ,-</p>
+                            <h3 class="title is-3">${meny.name}</h3>
+                        
+                         
+                        </article>
+                    `; 
+                })
+                menySection.innerHTML = htmlTxt;
 
         document.querySelectorAll("#Pizza").forEach( pizzaTitle => {
             pizzaTitle.addEventListener("click", ( e ) => {
@@ -108,7 +121,7 @@ import MenyModule from '../../Modules/MenyModule.js'
                     <div class="field">
                         <label class="label">Fjern fra Meny </label>
                         <p class="control has-icons-left has-icons-right">
-                        <input id="remove-input" class="input" type="text" placeholder="e.g Avokoado Salat">
+                        <input id="remove-input" class="input" type="text" placeholder="e.g Avokado Salat">
                             <span class="icon is-small is-right">
                                 <i class="fas fa-check"></i>
                             </span>
@@ -252,6 +265,7 @@ import MenyModule from '../../Modules/MenyModule.js'
 
 
   /* Printer ut funksjonsboksen hvor man skriver inn input */
+  /*
     const addMeny = () => {
         let htmlTxt = "";
 
@@ -309,10 +323,10 @@ import MenyModule from '../../Modules/MenyModule.js'
 
     }
 
-    
+    *//*
     const addMenyButton = () => {
         
-        /* input-felt */
+        /* input-felt */ /*
 
         const typeInput = document.querySelector("#type-input");
         let type = typeInput;
@@ -323,7 +337,7 @@ import MenyModule from '../../Modules/MenyModule.js'
         const recipeInput = document.querySelector("#recipe-input");
         let recipe = recipeInput;
         
-        /* knapp med eventListener */
+        /* knapp med eventListener */ /*
         document.querySelectorAll("button").forEach( button => {
             button.addEventListener("click", ( e ) => {
                 type = typeInput.options[typeInput.selectedIndex].text;
@@ -366,4 +380,4 @@ import MenyModule from '../../Modules/MenyModule.js'
         })
     } 
     addMeny();
-    addMenyButton();
+    addMenyButton(); */
