@@ -281,7 +281,7 @@ import MenyModule from '../../Modules/MenyModule.js'
 
     htmlTxt += `
     <!-- NAVN -->
-    <div class="columns box">
+    <div class="columns box mb-4">
             <article class="column">
                 <div class="field">
                     <label class="label">Legg til +</label>  
