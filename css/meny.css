@@ -31,11 +31,19 @@ i {
 }
 
 .tabs {
-  /* background-color: white; */
+
   display: inline-block;
 }
 
 .tabs li.is-active a {
   color: #363636!important;
-  border-color: #363636!important;
+  border-color: #e39f04!important;
+}
+.tabs li a {
+  height:1.5em;
+  width:5em;
+}
+
+.tabs ul {
+  border-bottom-color: #ffffff!important;
 }
