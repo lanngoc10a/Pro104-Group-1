@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- style -->
+    <link rel="stylesheet" href="../css/login.css">
+    <!-- footer -->
+    <link rel="stylesheet" href="../css/footer.css" type="text/css">
+    <!-- bulma -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- script -->
+    <script type="text/javascript" src="../scripts/login.js" defer></script>
+
+    <title>Internside</title>
+</head>
+<body>
+    <main>
+        <div class="container is-flex is-justify-content-center">
+            <div class="box login is-flex is-flex-direction-column">
+                <img class="is-align-self-center m-3" src="../Images/pizza_logo.svg" alt="logo" style="width:100px;height:100px;">
+                <h2 class="title">Internside</h2>
+                <div class="field">
+                    <label class="label">Brukernavn</label>
+                    <div class="control has-icons-left">
+                        <input type="text" class="input" placeholder="Brukernavn" id="username">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-user"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Passord</label>
+                    <div class="control has-icons-left">
+                        <input type="password" class="input" placeholder="Passord" id="password">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </div>
+                </div>
+                <p class="help is-danger" style="display: none;" id="helptext">Feil brukernavn eller passowrd</p>
+                <a href="#">Glemt passord?</a><br>
+                <div class="field">
+                    <p class="control">
+                      <button class="button is-success" id="submit-button">
+                        Login
+                      </button>
+                    </p>
+                  </div>
+            </div>
+        </div>
+    </main>
+        <!--footer elementer  -->
+     <footer class="footer has-background-grey footer-flex">
+        <div class="content-has-text-centered">
+            <ul>
+                <li class="footer-header">
+                    <h1>Våre sosiale medier</h1>
+                </li>
+                <li class="footer-links">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO">Instagram</a>   
+                </li>
+                <li class="footer-links">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO">Facebook</a>   
+                </li>
+                <li class="footer-links">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO">Twitter</a>   
+                </li>
+            </ul>
+            
+        </div>
+        <div class="content-has-text-centered">
+            <ul>
+                <li class="footer-header">
+                    <h1>Våre Partnere</h1>
+                </li>
+                <li class="footer-links">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO">Bama</a>   
+                </li>
+                <li class="footer-links">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO">Norges Bønder</a>   
+                </li>
+                <li class="footer-links">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO">Coolbeans</a>   
+                </li>
+            </ul>
+        </div>
+        <div class="content-has-text-centered">
+            <img src="../Images/pizza_logo.svg" alt="logo-bottom" style="width: 150px; height:150px;">
+        </div>
+     </footer>
+</body>
+</html>
