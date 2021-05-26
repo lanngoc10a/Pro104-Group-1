@@ -2,12 +2,12 @@
     font-family: 'Roboto', sans-serif;
 }
 main {
-    display: flex;
+    display: flex;  
     flex-wrap: wrap;
     justify-content: center;
     justify-content: space-evenly;
     padding:1em;
-    background-color: rgb(247, 247, 247);
+    /*background-color: rgb(247, 247, 247);*/
     z-index: 1;
 }
 .earning-columns {
@@ -74,3 +74,7 @@ main {
 }
 .restaurant-radio {
     margin:0.5em}
+
+#submit-search {
+    background-color: #e39f04;
+}
