@@ -84,10 +84,10 @@ const SalesModule = (function () {
         return itemArray;
     }
     
-    let restaurantOne = new Restaurant("restaurant 1", randomSales());
-    let restaurantTwo = new Restaurant("restaurant 2", randomSales());
-    let restaurantThree = new Restaurant("restaurant 3", randomSales());
-    let restaurantFour = new Restaurant("restaurant 4", randomSales());
+    let restaurantOne = new Restaurant("Grunerløkka", randomSales());
+    let restaurantTwo = new Restaurant("Sagene", randomSales());
+    let restaurantThree = new Restaurant("Frogner", randomSales());
+    let restaurantFour = new Restaurant("Grorud", randomSales());
     
     const getSales = () => {
         let restaurants = [restaurantOne, restaurantTwo, restaurantThree, restaurantFour]
