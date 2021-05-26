@@ -1,0 +1,12 @@
+main {
+    height:100vh;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    width: 26em;
+    padding:1rem;   
+}
