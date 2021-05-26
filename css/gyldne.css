@@ -1,28 +1,23 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
 .page {
-    padding: 10px;
+  padding: 10px;
   margin: auto;
   max-width: 800px;
 }
 
-#example1 {
-  border: 2px solid black;
-  padding: 25px;
-  background: url(Images/Om Gyldne/cookmann.jpg);
-  background-repeat: no-repeat;
-  background-size: auto;
-}
- 
-
 .smallbox {
   color: white;
   background-color: #e39f04;
-  max-width: 700px;
+  max-width: 800px;
 }
 
 .box {
   color: black;
   background-color: white;
-  max-width: 900px;
+  max-width: 1000px;
 }
 .header {
   font-size: x-large;
@@ -46,4 +41,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.box-text {
+  text-align: center;
+}
+
+.content-text {
+  padding: 10px 30px;
 }

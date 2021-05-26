@@ -57,7 +57,7 @@
                             <div class="select">
                                 <select id="position-input">
                                     <option>Velg posisjon</option>
-                                    <option>Sjef, avd. Kristiansand</option>
+                                    <option>Sjef, avd. Grorud</option>
                                     <option>Kokk</option>           
                                     <option>Servitør</option>           
                                     <option>Telefonansvarlig</option>           
@@ -139,10 +139,10 @@
 
     const employeeLocation = () => {
 
-        document.querySelectorAll("#oslo").forEach( osloTitle => {
-            osloTitle.addEventListener("click", ( e ) => {
+        document.querySelectorAll("#Grunerløkka").forEach( grunerTitle => {
+            grunerTitle.addEventListener("click", ( e ) => {
                 let htmlTxt = "";
-                let location = "Oslo";
+                let location = "Grünerløkka";
                 
                 EmployeeModule.getEmployeeByLocation( location ).forEach( employee => {
                     htmlTxt += `
@@ -160,10 +160,10 @@
             })
         })
 
-        document.querySelectorAll("#kristiansand").forEach( kristiansandTitle => {
-            kristiansandTitle.addEventListener("click", ( e ) => {
+        document.querySelectorAll("#Frogner").forEach( frognerTitle => {
+            frognerTitle.addEventListener("click", ( e ) => {
                 let htmlTxt = "";
-                let location = "Kristiansand";
+                let location = "Frogner";
                 
                 EmployeeModule.getEmployeeByLocation( location ).forEach( employee => {
                     htmlTxt += `
@@ -181,10 +181,10 @@
             })
         })
 
-        document.querySelectorAll("#stavanger").forEach( stavangerTitle => {
-            stavangerTitle.addEventListener("click", ( e ) => {
+        document.querySelectorAll("#Sagene").forEach( grorudTitle => {
+            grorudTitle.addEventListener("click", ( e ) => {
                 let htmlTxt = "";
-                let location = "Stavanger";
+                let location = "Sagene";
                 
                 EmployeeModule.getEmployeeByLocation( location ).forEach( employee => {
                     htmlTxt += `
@@ -202,21 +202,22 @@
             })
         })
 
-        document.querySelectorAll("#alle-ansatte").forEach( stavangerTitle => {
-            stavangerTitle.addEventListener("click", ( e ) => {
+        document.querySelectorAll("#Grorud").forEach( grorudTitle => {
+            grorudTitle.addEventListener("click", ( e ) => {
                 let htmlTxt = "";
+                let location = "Grorud";
                 
                 
-                EmployeeModule.getAllEmployees().forEach( employee => {
+                EmployeeModule.getEmployeeByLocation( location ).forEach( employee => {
                     htmlTxt += `
-                        <article id="${employee.name}" class="column is-4 has-text-centered">
-                            <div class="card">
-                                <img src="../Images/employees/${employee.image}" alt="Photo of ${employee.name}">
-                                
-                                <h3 class="title is-3">${employee.name}</h3>
-                                <p class="subtitle is-5 mb-2">${employee.position}</p>
-                            </div>
-                        </article>
+                    <article id="${employee.name}" class="column is-4 has-text-centered">
+                        <div class="card">
+                            <img src="../Images/employees/${employee.image}" alt="Photo of ${employee.name}">
+                            
+                            <h3 class="title is-3">${employee.name}</h3>
+                            <p class="subtitle is-5 mb-2">${employee.position}</p>
+                        </div>
+                    </article>
                     `; 
                 })
                 employeeSection.innerHTML = htmlTxt;
@@ -301,7 +302,11 @@
                                 <option>Idar Bakke</option>           
                                 <option>Thomas Richardsen</option>           
                                 <option>Mika Nilsen</option>           
-                                <option>Egil Jansen</option>           
+                                <option>Egil Jansen</option> 
+                                <option>Anniken Oftebro</option> 
+                                <option>Ulrikke Brandsen</option> 
+                                <option>Jannicke Svendsen</option> 
+                                <option>Fredrick Backstrøm</option>             
                             </select>
                         </div>
                 </div>
@@ -310,7 +315,7 @@
                         <div class="select">
                             <select id="position-input-modify">
                                 <option>Velg posisjon</option>
-                                <option>Sjef, avd. Kristiansand</option>
+                                <option>Sjef, avd. Grorud</option>
                                 <option>Kokk</option>           
                                 <option>Servitør</option>           
                                 <option>Telefonansvarlig</option>           

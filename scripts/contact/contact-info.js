@@ -3,11 +3,11 @@ const getLocation = document.querySelector("#location-now");
 const contactInfoSection = document.querySelector("#contact-info-section");
 
     const contactInfoGenerator = () => {
-        document.querySelectorAll("#oslo").forEach( osloTitle => {
+        document.querySelectorAll("#grunerløkka").forEach( grunerløkkaTitle => {
             
-            getLocation.innerHTML = "Ansatte i Oslo";
+            getLocation.innerHTML = "Ansatte i Grünerløkka";
                 let htmlTxt = "";
-                let location = "Oslo";
+                let location = "Grünerløkka";
                 
                 EmployeeModule.getEmployeeByLocation( location ).forEach( employee => {
                     htmlTxt += `
