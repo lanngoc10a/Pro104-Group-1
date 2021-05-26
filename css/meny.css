@@ -29,3 +29,13 @@
 i {
   color: #F86E51;
 }
+
+.tabs {
+  /* background-color: white; */
+  display: inline-block;
+}
+
+.tabs li.is-active a {
+  color: #363636!important;
+  border-color: #363636!important;
+}
