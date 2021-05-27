@@ -39,6 +39,8 @@ const contactInfoSection = document.querySelector("#contact-info-section");
                     `; 
                 })
                 contactInfoSection.innerHTML = htmlTxt;
+
+            
             
         })
     }

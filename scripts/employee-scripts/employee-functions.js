@@ -7,6 +7,12 @@
     const changeEmployeeFunction = document.querySelector("#change-employee-function");
 
 
+    /* oppdatere tab */
+
+    function resetTabs() {
+    let activeTabs = document.querySelectorAll(".is-active");
+    activeTabs.forEach(tab => tab.classList.toggle("is-active"))
+    }
     
     
 
@@ -77,6 +83,7 @@
         </div>
         `;
         addEmployeeSection.innerHTML += htmlTxt;
+
 
     }
 
@@ -157,6 +164,11 @@
                     `; 
                 })
                 employeeSection.innerHTML = htmlTxt;
+
+                /* changing tabs */
+                resetTabs();
+                document.querySelector("#gruner-li").classList.toggle("is-active");
+                
             })
         })
 
@@ -178,6 +190,10 @@
                     `; 
                 })
                 employeeSection.innerHTML = htmlTxt;
+
+                /* changing tabs */
+                resetTabs();
+                document.querySelector("#frogner-li").classList.toggle("is-active");
             })
         })
 
@@ -199,6 +215,10 @@
                     `; 
                 })
                 employeeSection.innerHTML = htmlTxt;
+
+                /* changing tabs */
+                resetTabs();
+                document.querySelector("#sagene-li").classList.toggle("is-active");
             })
         })
 
@@ -221,6 +241,10 @@
                     `; 
                 })
                 employeeSection.innerHTML = htmlTxt;
+
+                /* changing tabs */
+                resetTabs();
+                document.querySelector("#grorud-li").classList.toggle("is-active");
             })
         })
         
