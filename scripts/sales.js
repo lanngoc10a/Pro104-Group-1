@@ -133,8 +133,8 @@ function getValuesFromTotal(total) {
     return values;
 }
 
-//eventlistner, skal endre månedlig salg ved valg av restaurant
-console.log(document.querySelectorAll('input[name="restaurant"]'))
+
+
 //slutt
 
 
@@ -250,7 +250,7 @@ function showSaleSearch() {
     let itemTotal = selectedRestaurantObject.getItemTotal(chosenItem)
     let itemAmount = selectedRestaurantObject.getItemAmount(chosenItem)
     html += `
-        <div class="card">
+        <div class="card p-2">
             <h2 class="title">${chosenItem}</h2>
             <h3 class="subtitle">Resultat fra: ${selectedRestaurant}</h3>
             <p>Total inntjening: ${itemTotal.toLocaleString()},-<p>
