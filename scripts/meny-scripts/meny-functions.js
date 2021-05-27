@@ -8,8 +8,12 @@ import MenyModule from '../../Modules/MenyModule.js'
 
     
 
-    
-    
+    /* oppdatere tab */
+
+    function resetTabs() {
+        let activeTabs = document.querySelectorAll(".is-active");
+        activeTabs.forEach(tab => tab.classList.toggle("is-active"))
+    }
     
                 /***** SORTERE MENY Etter type *****/
 
@@ -49,6 +53,10 @@ import MenyModule from '../../Modules/MenyModule.js'
                     `; 
                 })
                 menySection.innerHTML = htmlTxt;
+                
+                /* changing tabs */
+                resetTabs();
+                document.querySelector("#pizza-li").classList.toggle("is-active");
             })
         })
    
@@ -72,6 +80,9 @@ import MenyModule from '../../Modules/MenyModule.js'
                     `; 
                 })
                 menySection.innerHTML = htmlTxt;
+                /* changing tabs */
+                resetTabs();
+                document.querySelector("#salat-li").classList.toggle("is-active");
             })
         })
 
@@ -93,6 +104,9 @@ import MenyModule from '../../Modules/MenyModule.js'
                     `; 
                 })
                 menySection.innerHTML = htmlTxt;
+                /* changing tabs */
+                resetTabs();
+                document.querySelector("#drikke-li").classList.toggle("is-active");
             })
         })
 
@@ -113,6 +127,10 @@ import MenyModule from '../../Modules/MenyModule.js'
                     `; 
                 })
                 menySection.innerHTML = htmlTxt;
+
+                /* changing tabs */
+                resetTabs();
+                document.querySelector("#meny-li").classList.toggle("is-active");
             })
         })
         
