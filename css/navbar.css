@@ -13,13 +13,19 @@
     z-index: 100;
 }
 
-.links {
+nav ul {
     display: flex;
-    justify-content: flex-start; /*sett til space-around hvis du heller vil ha spredt*/
     align-items: center;
     width: 100%;
     height: 100%;
+}
 
+.navbar-right {
+    justify-content: flex-end /*sett til space-around hvis du heller vil ha spredt*/
+}
+
+.navbar-left {
+    justify-content: flex-start;
 }
 
 .navbar-top li {
