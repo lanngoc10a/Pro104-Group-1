@@ -40,11 +40,11 @@ nav ul {
 }
 
 .navbar-top li:hover {
-    background-color: #fee247;
+    background-color: #f2c85b;
 }
 
 .navbar-top li:active {
-    background-color: #ccb73e;
+    background-color: #e39f04;
 }
 
 .navbar-top a {

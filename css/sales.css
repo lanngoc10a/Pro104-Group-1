@@ -16,7 +16,7 @@ main {
     width:100%;
 }
 .earning-column {
-    background-color: #04e3b3;
+    background-color: #F2C85B;
     align-self: flex-end;
     width:5em;
 }
@@ -51,7 +51,7 @@ main {
 }
 
 .yearly-text {
-    color:#29ff69;
+    color:#F86E51;
 }
 
 #monthly-sales {
