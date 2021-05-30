@@ -19,7 +19,6 @@ i {
     color: #F86E51;
 }
 
-
 #mail-icon:hover {
     width: 33%;
 }
@@ -27,11 +26,6 @@ i {
 #id-icon:hover {
     width: 30%;
 }
-
-
-/*.card-color {
-    background-color: #FBA465;
-}*/
 
 .box-color {
     background-color: #ffe865;
@@ -55,11 +49,6 @@ i {
     width: 300px;
     
 }
-
-/*#locations h3{
-    color: #b7201f;
-    
-}*/
 
 #phone-icon-outline {
     position: relative;

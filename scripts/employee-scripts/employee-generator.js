@@ -4,9 +4,7 @@ import EmployeeModule from '../../Modules/EmployeeModule.js'
     
 
     const employeeGenerator = () => {
-        let htmlTxt = "";
-        
-        
+            
             //Bruker den ansattes navn som article-ID så den senere kan bli slettet
         EmployeeModule.getAllEmployees().forEach( employee => {
             let htmlTxt = "";

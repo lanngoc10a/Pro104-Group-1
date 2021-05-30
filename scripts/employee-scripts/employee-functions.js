@@ -254,9 +254,6 @@
 
 
 
-
-    
-
                 /***** FJERNE ANSATTE *****/
     
     const removeEmployee = () => {
