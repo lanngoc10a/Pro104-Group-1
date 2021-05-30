@@ -17,16 +17,15 @@ i {
 }
 
 .tabs {
-
     display: inline-block;
-  }
+}
   
-  .tabs li.is-active a {
+.tabs li.is-active a {
     color: #363636!important;
     border-color: #e39f04!important;
-  }
+}
   
-  .tabs ul {
+.tabs ul {
     border-bottom-color: #ffffff!important;
-  }
+}
 
