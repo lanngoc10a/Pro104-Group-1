@@ -4,6 +4,7 @@
 }
 
 .navbar-top {
+    display: flex;
     background-color: #e39f04;
     width: 100%;
     height: 3.3rem;
@@ -12,13 +13,19 @@
     z-index: 100;
 }
 
-.links {
+nav ul {
     display: flex;
-    justify-content: flex-start; /*sett til space-around hvis du heller vil ha spredt*/
     align-items: center;
     width: 100%;
     height: 100%;
+}
 
+.navbar-right {
+    justify-content: flex-end 
+}
+
+.navbar-left {
+    justify-content: flex-start;
 }
 
 .navbar-top li {
@@ -29,15 +36,15 @@
     padding: 0 2em 0 2rem;
     display: flex;
     align-items: center;
-    /* position: relative; */
+    
 }
 
 .navbar-top li:hover {
-    background-color: #fee247;
+    background-color: #f2c85b;
 }
 
 .navbar-top li:active {
-    background-color: #ccb73e;
+    background-color: #e39f04;
 }
 
 .navbar-top a {
@@ -46,8 +53,5 @@
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     margin: 0;
-    
-    /* for å sentrere logoen*/
     display: flex;
-
 }

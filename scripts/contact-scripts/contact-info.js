@@ -2,6 +2,8 @@ import EmployeeModule from '../../Modules/EmployeeModule.js'
 const getLocation = document.querySelector("#location-now");
 const contactInfoSection = document.querySelector("#contact-info-section");
 
+
+    //Printer ut alle ansatte fra Grünerløkka når du kommer inn på siden
     const contactInfoGenerator = () => {
         document.querySelectorAll("#grunerløkka").forEach( grunerløkkaTitle => {
             
@@ -39,29 +41,8 @@ const contactInfoSection = document.querySelector("#contact-info-section");
                     `; 
                 })
                 contactInfoSection.innerHTML = htmlTxt;
-            
+     
         })
     }
 
     contactInfoGenerator();
-
-
-
-
-
-
-
-
-
-    /* 
-    <article id="${employee.name}" class="column is-3 has-text-centered">
-                    <div class="box is-wide">
-                        <img class="is-rounded" src="../Images/employees/${employee.image}" alt="Photo of ${employee.name}">
-                        
-                        <h3 class="title is-3">${employee.name}</h3>
-                        <p class="subtitle is-5">${employee.position}</p>
-                        <p class="subtitle is-6">Telefon: ${employee.phone}</p>
-                        <p class="subtitle is-6  mb-2">E-post: ${employee.email}</p>
-                    </div>
-                </article>
-    */

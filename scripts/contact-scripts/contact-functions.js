@@ -3,9 +3,19 @@ import EmployeeModule from '../../Modules/EmployeeModule.js'
 const getLocation = document.querySelector("#location-now");
 const contactInfoSection = document.querySelector("#contact-info-section");
 
-const employeeLocation = () => {
+    /* oppdatere tab */
 
-    
+function resetTabs() {
+    let activeTabs = document.querySelectorAll(".is-active");
+    activeTabs.forEach(tab => tab.classList.toggle("is-active"))
+}
+
+
+
+/* Sorterer de ansatte basert på lokasjon */
+
+const employeeLocation = () => {
+ 
     document.querySelectorAll("#grunerløkka").forEach( grunerløkkaTitle => {
         grunerløkkaTitle.addEventListener("click", ( e ) => {
             getLocation.innerHTML = "Ansatte i Grünerløkka";
@@ -42,6 +52,10 @@ const employeeLocation = () => {
                 `; 
             })
             contactInfoSection.innerHTML = htmlTxt;
+
+            /* changing tabs */
+            resetTabs();
+            document.querySelector("#gruner-li").classList.toggle("is-active");
         })
     })
 
@@ -81,6 +95,10 @@ const employeeLocation = () => {
                 `; 
             })
             contactInfoSection.innerHTML = htmlTxt;
+
+            /* changing tabs */
+            resetTabs();
+            document.querySelector("#frogner-li").classList.toggle("is-active");
         })
     })
 
@@ -120,6 +138,10 @@ const employeeLocation = () => {
                 `; 
             })
             contactInfoSection.innerHTML = htmlTxt;
+
+            /* changing tabs */
+            resetTabs();
+            document.querySelector("#sagene-li").classList.toggle("is-active");
         })
     })
 
@@ -159,11 +181,12 @@ const employeeLocation = () => {
                 `; 
             })
             contactInfoSection.innerHTML = htmlTxt;
+
+            /* changing tabs */
+            resetTabs();
+            document.querySelector("#grorud-li").classList.toggle("is-active");
         })
     })
-
-    
-
-    
+  
 }
 employeeLocation();

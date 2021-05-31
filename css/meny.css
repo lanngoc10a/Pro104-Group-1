@@ -13,6 +13,7 @@
   
   .card {
   height: 100%;
+  padding-bottom: 30px;
 
 }
   
@@ -28,4 +29,22 @@
 
 i {
   color: #F86E51;
+}
+
+.tabs {
+
+  display: inline-block;
+}
+
+.tabs li.is-active a {
+  color: #363636!important;
+  border-color: #e39f04!important;
+}
+.tabs li a {
+  height:1.5em;
+  width:5em;
+}
+
+.tabs ul {
+  border-bottom-color: #ffffff!important;
 }

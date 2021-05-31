@@ -19,7 +19,6 @@ i {
     color: #F86E51;
 }
 
-
 #mail-icon:hover {
     width: 33%;
 }
@@ -27,11 +26,6 @@ i {
 #id-icon:hover {
     width: 30%;
 }
-
-
-/*.card-color {
-    background-color: #FBA465;
-}*/
 
 .box-color {
     background-color: #ffe865;
@@ -56,11 +50,6 @@ i {
     
 }
 
-/*#locations h3{
-    color: #b7201f;
-    
-}*/
-
 #phone-icon-outline {
     position: relative;
     z-index: 2;
@@ -78,3 +67,17 @@ i {
     top: 70px;
     right: -109px;
 }
+
+.tabs {
+    display: inline-block;
+}
+  
+.tabs li.is-active a {
+    color: #363636!important;
+    border-color: #e39f04!important;
+}
+  
+.tabs ul {
+    border-bottom-color: #ffffff!important;
+}
+

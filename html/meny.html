@@ -4,38 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <!-- css -->
     <link rel="stylesheet" href="../css/meny.css">
     <!--css navbar og footer -->
     <link rel="stylesheet" href="../css/navbar.css" type="text/css">
     <link rel="stylesheet" href="../css/footer.css" type="text/css">
+    <!-- bulma -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 
     <!-- script -->
     <script src = "../scripts/meny-scripts/meny.js" defer></script>
     <script type="module" src="../scripts/meny-scripts/meny-functions.js"></script>
 
-    
-
     <title>MENY</title>
-
+    <!-- favicon -->
+    <link rel="icon" 
+      type="favicon" 
+      href="../Images/favicon.ico">
 </head>
 <body>
     <!--navbar elementer-->
   <nav class = "navbar-top">
-    <ul class ="links">
-        <li><a href="Main.html"><img src="../Images/pizza_logo.png" alt="logo" style="width:42px;height:42px;"></a></li>
+    <ul class ="navbar-left">
+        <li><a href="Om Gyldne.html"><img src="../Images/pizza_logo.png" alt="logo" style="width:42px;height:42px;"></a></li>
         <li><a href="employees.html">Ansatte</a></li>
         <li><a href="salg.html">Salg</a></li>
         <li><a href="contact.html">Kontakt Oss</a></li>
     </ul>
+    <ul class="navbar-right">
+        <li><a href="login.html" class="links">Logg ut</a></li>
+    </ul>
+</nav>
         
      
     <main class="container">
 
-        <article class="columns">
+        <article class="columns p-5">
            
             <div class="column">
 
@@ -48,11 +54,15 @@
                     <!-- Klikkbare Lokasjoner -->
                     <section class="column has-text-centered">
                        
-                        <div class="tabs is-centered is-large">
-                            <a id="meny" class="title is-1">Alle</a>
-                            <a id="Pizza" class="title is-1">Pizza</a>
-                            <a id="Salat" class="title is-1">Salat</a>
-                            <a id="Drikker" class="title is-1">Drikker</a>
+                        <div class="tabs is-centered is-large is-fullwidth">
+                            <ul>
+                                <li class="is-active" id="meny-li"><a id="meny" class="title is-2 ">Alle</a></li>
+                                <li id="pizza-li"><a id="Pizza" class="title is-2">Pizza</a></li>
+                                <li id="salat-li"><a id="Salat" class="title is-2">Salat</a></li>
+                                <li id="drikke-li"><a id="Drikker" class="title is-2">Drikke</a></li>
+                                
+                            </ul>
+                            
                             
                         </div>
                     </section>
@@ -121,7 +131,5 @@
             <img src="../Images/pizza_logo.png" alt="logo-bottom" style="width: 150px; height:150px;">
         </div>
      </footer>
-
-   
 </body>
 </html>

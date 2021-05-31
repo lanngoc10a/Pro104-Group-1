@@ -7,26 +7,33 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="../css/contact.css">
-    <!--css navbar og footer -->
+    <!--css navbar / footer -->
     <link rel="stylesheet" href="../css/navbar.css" type="text/css">
     <link rel="stylesheet" href="../css/footer.css" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 
-    <script type="module" src="../scripts/contact/contact-info.js"></script>
-    <script type="module" src="../scripts/contact/contact-functions.js"></script>
+    <script type="module" src="../scripts/contact-scripts/contact-info.js"></script>
+    <script type="module" src="../scripts/contact-scripts/contact-functions.js"></script>
 
     <title>Kontakt oss</title>
+    <!-- favicon -->
+    <link rel="icon" 
+      type="favicon" 
+      href="../Images/favicon.ico">
 </head>
 <body>
     <!--navbar elementer-->
   <nav class = "navbar-top">
-    <ul class ="links">
-        <li><a href="Main.html"><img src="../Images/pizza_logo.png" alt="logo" style="width:42px;height:42px;"></a></li>
+    <ul class ="navbar-left">
+        <li><a href="Om gyldne.html"><img src="../Images/pizza_logo.png" alt="logo" style="width:42px;height:42px;"></a></li>
         <li><a href="meny.html">Meny</a></li>
         <li><a href="employees.html">Ansatte</a></li>
         <li><a href="salg.html">Salg</a></li>
-        <li><a href="salg.html">Placeholder</a></li>
     </ul>
+    <ul class="navbar-right">
+        <li><a href="login.html" class="links">Logg ut</a></li>
+    </ul>
+    </nav>
     
     <main class="container">
 
@@ -39,12 +46,13 @@
             
             <section class="column is-6 has-text-centered">
                        
-                <div class="tabs is-centered is-large">
-                    <a id="grunerløkka" class="title is-4">Grünerløkka</a>
-                    <a id="frogner" class="title is-4">Frogner</a>
-                    <a id="sagene" class="title is-4">Sagene</a>
-                    <a id="grorud" class="title is-4">Grorud</a>
-                    <a></a>
+                <div class="tabs is-left is-large is-fullwidth pl-1 pr-6">
+                    <ul>
+                        <li class="is-active" id="gruner-li"><a id="grunerløkka" class="title is-4">Grünerløkka</a></li>
+                        <li id="frogner-li"><a id="frogner" class="title is-4">Frogner</a></li>
+                        <li id="sagene-li"><a id="sagene" class="title is-4">Sagene</a></li>
+                        <li id="grorud-li"><a id="grorud" class="title is-4">Grorud</a></li>   
+                    </ul>
                     
                 </div>
 
@@ -90,17 +98,10 @@
         </div> 
         
      </div>
-
-        
-
-        
-        
-
     </main>
 
 </body>
 </html>
-
 
     </main>
     <!--footer elementer  -->
@@ -142,6 +143,5 @@
             <img src="../Images/pizza_logo.png" alt="logo-bottom" style="width: 150px; height:150px;">
         </div>
      </footer>
-
 </body>
 </html>

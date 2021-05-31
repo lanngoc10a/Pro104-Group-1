@@ -7,7 +7,6 @@ main {
     justify-content: center;
     justify-content: space-evenly;
     padding:1em;
-    /*background-color: rgb(247, 247, 247);*/
     z-index: 1;
 }
 .earning-columns {
@@ -17,7 +16,7 @@ main {
     width:100%;
 }
 .earning-column {
-    background-color: #04e3b3;
+    background-color: #F2C85B;
     align-self: flex-end;
     width:5em;
 }
@@ -52,7 +51,7 @@ main {
 }
 
 .yearly-text {
-    color:#29ff69;
+    color:#F86E51;
 }
 
 #monthly-sales {
@@ -77,4 +76,9 @@ main {
 
 #submit-search {
     background-color: #e39f04;
+}
+
+/* må overskive for å få lik footer som de andre sidene */
+a:hover {
+    color:#363636!important;
 }

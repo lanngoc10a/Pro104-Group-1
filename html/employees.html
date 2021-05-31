@@ -18,16 +18,24 @@
     <script type="module" src="../scripts/employee-scripts/employee-functions.js"></script>
     
     <title>Ansatte</title>
+    <!-- favicon -->
+    <link rel="icon" 
+      type="favicon" 
+      href="../Images/favicon.ico">
 </head>
 <body>
     <!--navbar elementer-->
   <nav class = "navbar-top">
-    <ul class ="links">
-        <li><a href="Main.html"><img src="../Images/pizza_logo.png" alt="logo" style="width:42px;height:42px;"></a></li>
+    <ul class ="navbar-left">
+        <li><a href="Om gyldne.html"><img src="../Images/pizza_logo.png" alt="logo" style="width:42px;height:42px;"></a></li>
         <li><a href="meny.html">Meny</a></li>
         <li><a href="salg.html">Salg</a></li>
-        <li><a href="salg.html">Placeholder</a></li>
+        <li><a href="contact.html">Kontakt Oss</a></li>
     </ul>
+    <ul class="navbar-right">
+        <li><a href="login.html" class="links">Logg ut</a></li>
+    </ul>
+  </nav>
 
     <main class="container">
 
@@ -53,23 +61,15 @@
                     </section>
 
                     <!-- Klikkbare Lokasjoner -->
-                    <section class="columns has-text-right mt-3">
-                        <div>
-                            <a>
-                                <h3 id="Grunerløkka" class="title is-1">Grünerløkka</h3>
-                            </a>
-                            <a>
-                                <h3  id="Frogner" class="title is-1">Frogner</h3>
-                            </a>
-                            <a>
-                                <h3 id="Sagene" class="title is-1">Sagene</h3>
-                            </a>
-                            <a>
-                                <h3 id="Grorud" class="title is-1">Grorud</h3>
-                            </a>
-                        </div>
-                    </section>
-
+                    <div class="tabs is-left is-large is-fullwidth mt-5 pt-6 pr-6 mr-6">
+                        <ul>
+                            <li class="is-active" id="gruner-li"><a id="Grunerløkka" class="title is-3">Grünerløkka</a></li>
+                            <li id="frogner-li"><a id="Frogner" class="title is-3">Frogner</a></li>
+                            <li id="sagene-li"><a id="Sagene" class="title is-3">Sagene</a></li>
+                            <li id="grorud-li"><a id="Grorud" class="title is-3">Grorud</a></li>   
+                        </ul>
+                        
+                    </div>
                 </section>
 
                 
@@ -138,6 +138,5 @@
             <img src="../Images/pizza_logo.png" alt="logo-bottom" style="width: 150px; height:150px;">
         </div>
      </footer>
-
 </body>
 </html>
