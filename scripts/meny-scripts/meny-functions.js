@@ -272,7 +272,7 @@ import MenyModule from '../../Modules/MenyModule.js'
                 
                 //Legger til ny input
                 htmlTxt += `
-                <article id="${name}" class="column is-4 has-text-centered">
+                <article id="${name}" class="column is-3 has-text-centered">
                     <div class="card">
                     <img class="images" src="../images/meny/${name}.png" alt="Photo of ${name}">
                     <p class="subtitle is-6">Pris: ${price} ,- </p>
@@ -393,7 +393,7 @@ const addMenyButton = () => {
 
             if(type === "Pizza"){
                 menySection.innerHTML += `
-                    <article class="column is-2 has-text-centered">
+                    <article class="column is-3 has-text-centered">
                         <div class="card">
                         <img class="images" src="../Images/meny/add-new-food/Pizza.png" alt="Photo of ${name}">
                         <p class="subtitle is-6">Pris: ${price} ,- </p>
@@ -404,7 +404,7 @@ const addMenyButton = () => {
                 `;
             }else if(type === "Salat"){
                 menySection.innerHTML += `
-                    <article class="column is-2 has-text-centered">
+                    <article class="column is-3 has-text-centered">
                         <div class="card">
                         <img class="images" src="../Images/meny/add-new-food/en-ny-salat.png" alt="Photo of ${name}">
                         <p class="subtitle is-6">Pris: ${price} ,- </p>
@@ -415,7 +415,7 @@ const addMenyButton = () => {
                 `; 
              }else if (type === "Drikker"){
                 menySection.innerHTML += `
-                    <article class="column is-2 has-text-centered">
+                    <article class="column is-3 has-text-centered">
                         <div class="card">
                         <img class="images" src="../Images/meny/add-new-food/ny-drikke.png" alt="Photo of ${name}">
                         <p class="subtitle is-6">Pris: ${price} ,- </p>
